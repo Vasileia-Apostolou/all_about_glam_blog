@@ -1,45 +1,100 @@
-<img src="https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png" style="margin: 0;">
+Milestone Project : Data Centric Development - Code Institute 
 
-Welcome USER_NAME,
+## Table Of Content 
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use.
+## About
+This application is a blogpost and it was created for users to get inspired and share anything related to beauty. Users can create an account where they can add as many blogposts as they like for free! Plus they can update or edit their posts and profile account. 
 
-## Gitpod Reminders
+## Why This Project?
+This application was created for my 3rd Project with Data Centric Development for [Code Institute](https://codeinstitute.net/). I used Python and a no-SQL database, MongoDB, to create this project which uses CRUD operations to allow users to create, read, update and delete their posts.
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+## UX
 
-`python3 -m http.server`
+### User Stories
+* As a user, I want to be able to create my own account.
+* As a user, I want to read inspiring posts from the web application.
+* As a user, I want to be able to update my post or profile.
+* As a user, I want to be able to delete any of my posts or even my profile account.
 
-A blue button should appear to click: *Make Public*,
+### Wireframes
 
-Another blue button should appear to click: *Open Browser*.
+## Features
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+### Functionality
+The web application uses Python login to allow user to register or login to their account for free and in addition it offers CRUD operations which allows users to create, read, update and delete their posts or profile account.
 
-A blue button should appear to click: *Make Public*,
+### Existing Features
 
-Another blue button should appear to click: *Open Browser*.
+### Features Left To Implement 
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+## Technologies Used 
 
-## Updates Since The Instructional Video
+### Languages 
+1. [HTML](https://en.wikipedia.org/wiki/HTML)
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+HTML was used in this project to keep up with the latest industry standards. 
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+2. [CSS](https://en.wikipedia.org/wiki/Cascading_Style_Sheets)
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+CSS was used for styling the content.
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+3. [JavaScript](https://en.wikipedia.org/wiki/JavaScript)
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+JavaScript was used to create the main functional logic of this app. 
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+4. [Python](https://en.wikipedia.org/wiki/Python_programming_language)
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+Python was used as the back-end programming language for this app.
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+### Tools 
+1. [Git](https://git-scm.com/)
 
---------
+Git was used in this project for version control.
 
-Happy coding!
+2. [Gitpod](https://www.gitpod.io/)
+
+Gitpod was used to develop this project.
+
+3. [Balsamiq](https://balsamiq.com/)
+
+Balsamiq was used to create the wireframes.
+
+4. [Dev Tools](https://developers.google.com/web/tools/chrome-devtools)
+
+Chrome DevTools is a set of web developer tools built directly into the Google Chrome browser. DevTools can help you edit pages on-the-fly and diagnose problems quickly, which ultimately helps you build better websites, faster. Google Chrome's Dev Tools was used in the building process of this project.
+
+### Libraries 
+1. Icons were obtained from [Font Awesome](https://fontawesome.com/).
+
+2. Fonta were taken from [Google Fonts](https://fonts.google.com/).
+
+### Frameworks 
+1. [jQuery](https://jquery.com/)
+
+jQuery is a fast, small, and feature-rich JavaScript library. It was used in this project to simplify the DOM.
+
+2. [Flask](https://flask.palletsprojects.com/en/1.1.x/)
+
+Flask is a micro web framework written in Python. 
+
+3. [Materialize](https://materializecss.com/)
+
+Materialize UI components help in constructing attractive, consistent, and functional web pages and web apps, while adhering to modern web design principles such as browser portability, device independence, and graceful degradation.
+
+### Hosting 
+* [Heroku](https://www.heroku.com/)
+
+Heroku was used as the hosting platform to deploy this app.
+
+## Testing
+
+## Deployment 
+
+## Credits 
+
+### Media 
+
+### Acknowledgements
+
+### Disclaimer
+This project is for educational purposes only.
