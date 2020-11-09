@@ -66,7 +66,11 @@ Chrome DevTools is a set of web developer tools built directly into the Google C
 ### Libraries 
 1. Icons were obtained from [Font Awesome](https://fontawesome.com/).
 
-2. Fonta were taken from [Google Fonts](https://fonts.google.com/).
+2. Fonts were taken from [Google Fonts](https://fonts.google.com/).
+
+3. [Materialize](https://materializecss.com/)
+
+Materialize UI components help in constructing attractive, consistent, and functional web pages and web apps, while adhering to modern web design principles such as browser portability, device independence, and graceful degradation.
 
 ### Frameworks 
 1. [jQuery](https://jquery.com/)
@@ -77,9 +81,6 @@ jQuery is a fast, small, and feature-rich JavaScript library. It was used in thi
 
 Flask is a micro web framework written in Python. 
 
-3. [Materialize](https://materializecss.com/)
-
-Materialize UI components help in constructing attractive, consistent, and functional web pages and web apps, while adhering to modern web design principles such as browser portability, device independence, and graceful degradation.
 
 ### Hosting 
 * [Heroku](https://www.heroku.com/)
