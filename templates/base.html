@@ -12,6 +12,26 @@
 </head>
 <body>
 
+<header>
+	<nav class="nav-extended">
+		<div class="nav-wrapper">
+			<a href="{{ url_for('blog_posts') }}" class="brand-logo">All About Glam</a>
+			<a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="fas fa-bars"></i></a>
+			<ul class="right hide-on-med-and-down">
+				<li><a href="{{ url_for('blog_posts') }}">Home</a></li>
+				<li><a href="register.html">Register</a></li>
+				<li><a href="login.html">Login</a></li>
+			</ul>
+		</div>
+	</nav>
+
+	<ul class="sidenav" id="mobile-demo">
+        <li><h4 class="center-align">All About Glam</h4></li>
+		<li><a href="{{ url_for('blog_posts') }}">Home</a></li>
+		<li><a href="register.html">Register</a></li>
+		<li><a href="login.html">Login</a></li>
+	</ul>
+</header>
 <h1>Base</h1>
     {% block content %}
     {% endblock%}
