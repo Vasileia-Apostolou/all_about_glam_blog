@@ -1,26 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Akronim&family=Arizonia&family=Balsamiq+Sans&family=Italianno&family=Quicksand&family=Sail&family=Varela+Round&display=swap');
+
 body {
-    background-color: #b76e85;
+    background: url("/static/images/bg1.jpg");
+    font-family: "Quicksand", sans-serif;
 }
 
+h3 {
+    background-color: white;
+    color: #8f475e;
+    line-height: 70px;
+    border: 4px ridge black;
+    text-transform: uppercase;
+}
+
+small a {
+    color: #8f475e;
+}
+
+form {
+    margin-top: 5%;
+}
+
+.card-panel {
+    border: 3px solid black;
+}
+
+/* -------- LOGO -------- */
 .brand-logo {
-    font-family: cursive;
+    font-family: "Sail", cursive;
+    font-size: 20%;
     color: #a9546f !important;
     margin-left: 30px;
 }
 
 /* --------- NAVBAR --------- */
 .nav-styling {
-    font-size: 17px;
+    font-size: 18px;
     color: #a9546f !important;
-    margin-left: 20px;
+    margin-left: 40px;
 }
 
 .nav-wrapper {
-    background-color: #e4c9d2;
+    background-color: #f2e4e8;
 }
 
+/* ------- FLASHED MESSAGES ------- */
 .flashes h4 {
     line-height: 2;
-    color: black;
+    color: #a9546f !important;
     background-color: white;
+    font-family: cursive;
+}
+
+/* ------ BUTTONS ------- */
+.reg-login-btn {
+    background-color: #f2e4e8;
+    color: #a9546f;
+}
+
+.reg-login-btn:hover {
+    background-color: #e5cad2;
+    
 }

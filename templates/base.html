@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" type="text/css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css"
+		type="text/css" />
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css">
     {% block styles %}
     {% endblock %}
@@ -33,13 +35,13 @@
 	</nav>
 	<ul class="sidenav nav-wrapper" id="mobile-demo">
 		<li><h4 class="brand-logo center-align">All About Glam</h4></li>
-		<li><a class="nav-styling" href="{{ url_for('blog_posts') }}">Home</a></li>
+		<li><a class="center-align nav-styling" href="{{ url_for('blog_posts') }}">Home</a></li>
 		{% if session.username %}
-				<li><a class="nav-styling" href="{{ url_for('users', username=session['username']) }}">Profile</a></li>
-				<li><a class="nav-styling" href="{{ url_for('logout') }}">Log Out</a></li>
+				<li><a class="center-align nav-styling" href="{{ url_for('users', username=session['username']) }}">Profile</a></li>
+				<li><a class="center-align nav-styling" href="{{ url_for('logout') }}">Log Out</a></li>
 			{% else %}
-			    <li><a class="nav-styling" href="{{ url_for('register') }}">Register</a></li>
-				<li><a class="nav-styling" href="{{ url_for('login') }}">Login</a></li>
+			    <li><a class="center-align nav-styling" href="{{ url_for('register') }}">Register</a></li>
+				<li><a class="center-align nav-styling" href="{{ url_for('login') }}">Login</a></li>
 			{% endif %}
 	</ul>
 </header>
