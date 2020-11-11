@@ -21,6 +21,7 @@
 			<a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="fas fa-bars"></i></a>
 			<ul class="right hide-on-med-and-down">
 				<li><a class="nav-styling" href="{{ url_for('blog_posts') }}">Home</a></li>
+                <li><a class="nav-styling" href="{{ url_for('users', username=session['username']) }}">Profile</a></li>
 				<li><a class="nav-styling" href="{{ url_for('register') }}">Register</a></li>
 				<li><a class="nav-styling" href="{{ url_for('login') }}">Login</a></li>
 			</ul>
@@ -29,6 +30,7 @@
 	<ul class="sidenav nav-wrapper" id="mobile-demo">
         <li><h4 class="brand-logo center-align">All About Glam</h4></li>
 		<li><a class="nav-styling" href="{{ url_for('blog_posts') }}">Home</a></li>
+           <li><a class="nav-styling" href="{{ url_for('users', username=session['username']) }}">Profile</a></li>
 		<li><a class="nav-styling" href="{{ url_for('register') }}">Register</a></li>
 		<li><a class="nav-styling" href="{{ url_for('login') }}">Login</a></li>
 	</ul>
