@@ -92,7 +92,9 @@ def logout():
 
 @app.route("/create_blog")
 def create_blog():
-    return render_template("create_blog.html")
+    blogpost = mongo.db.blogpost.find().sort("category_name", 1)
+    return render_template("create_blog.html", blogpost=blogpost)
+
 
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
