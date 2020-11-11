@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block content %}
+ 
+<h3 class="center-align">Login</h3>
+
+<div class="row">
+	<form class="col s12 m8 offset-m2" method="POST" action="{{ url_for('login') }}">
+		<div class="card-panel">
+			<div class="row">
+				<div class="input-field col s12">
+				    <i class="far fa-user prefix"></i>
+                    <input id="username" name="username" type="text" class="validate">
+					<label for="username">Username</label>
+				</div>
+            </div>
+			<div class="row">
+					<div class="input-field col s12">
+                        <i class="far fa-eye prefix"></i>
+						<input id="password" name="password" type="password" minlength="8" maxlength="20" class="validate" required>
+						<label for="password">Password</label>
+					</div>
+			</div>
+                <div class="row">
+                   <button type="submit" class="btn-large">Log In <i class="fas fa-sign-in-alt"></i></button>
+                </div>
+            <div>
+              <small>  
+                 Want to create an account? Register Now! <a href="{{ url_for('register') }}"> Sign In</a>
+              </small>
+            </div>
+		</div>
+	</form>
+</div>
+
+{% endblock %}
