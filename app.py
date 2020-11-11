@@ -21,7 +21,7 @@ mongo = PyMongo(app)
 @app.route("/")
 @app.route("/blog_posts")
 def blog_posts():
-    blogs = mongo.db.blogpost.find()
+    blogs = list(mongo.db.blogpost.find())
     return render_template("blogpost.html", blogs=blogs)
 
 

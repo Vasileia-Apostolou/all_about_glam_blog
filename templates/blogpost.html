@@ -2,26 +2,21 @@
 {% block content %}
 
 <h2> blogpost </h2>
-
-    {% for blogpost in blogs %}
-        {{ blogpost.blog_title }}<br>
-        {{ blogpost.blog_content }}<br>
-    {% endfor %}
-
-<ul class="collapsible">
-	<li>
-		<div class="collapsible-header"><i class="far fa-arrow-alt-circle-down"></i>First</div>
-		<div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-	</li>
-	<li>
-		<div class="collapsible-header"><i class="far fa-arrow-alt-circle-down"></i>Second</div>
-		<div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-	</li>
-	<li>
-		<div class="collapsible-header"><i class="far fa-arrow-alt-circle-down"></i>Third</div>
-		<div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-	</li>
-</ul>
+	<ul class="collapsible">
+        {% for blogpost in blogs %}
+		<li>
+			<div class="collapsible-header">
+				<i class="far fa-arrow-alt-circle-down"></i>
+				  Blog
+                <strong> {{ blogpost.blog_title }} </strong> 
+			</div>
+			<div class="collapsible-body">
+				<span>Lorem ipsum dolor sit amet.</span>
+                <p> {{ blogpost.blog_content }} </p>
+			</div>
+		</li>
+        {% endfor %}
+	</ul>
 
 {% endblock %}
 
