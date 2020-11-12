@@ -90,10 +90,19 @@ def logout():
     return redirect(url_for("login"))
 
 
-@app.route("/create_blog")
+@app.route("/create_blog", methods=["GET", "POST"])
 def create_blog():
-    blogpost = mongo.db.blogpost.find().sort("category_name", 1)
-    return render_template("create_blog.html", blogpost=blogpost)
+    if request.method == "POST":
+        blog = {
+            "blog_title": request.form.get("blog_title"),
+            "blog_content": request.form.get("blog_content"),
+            "created_by": session["username"]
+        }
+        mongo.db.blogpost.insert_one(blog)
+        flash("New blog created!")
+        return redirect(url_for("blog_posts"))
+
+    return render_template("create_blog.html")
 
 
 if __name__ == "__main__":

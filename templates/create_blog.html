@@ -4,7 +4,7 @@
 <h3 class="center-align">Create New Blog</h3>
 
 <div class="row">
-	<form class="col s12" method="POST" action="">
+	<form class="col s12" method="POST" action="{{ url_for('create_blog') }}">
 		<div class="card-panel">
 			<div class="row">
 				<div class="input-field col s12">
@@ -21,15 +21,8 @@
 				</div>
 			</div>
 			<div class="row">
-				<div class="input-field col s12">
-                    <i class="fas fa-ellipsis-v prefix"></i>
-					<select multiple id="category_name" name="category_name" class="validate" required>
-						      <option value="" disabled selected>Choose your category</option>
-			                  {% for blogpost in blogpost %}
-						           <option value="{{ blogpost.category_name }}">{{ blogpost.category_name }}</option>
-			                  {% endfor %}
-						    </select>
-					<label for="category_name">Beauty Category</label>
+				<div class="col s12 center-align">
+					<button type="submit" class="col s12 m4 offset-m4 reg-login-btn btn-large hvr-grow hvr-glow">Create Blog <i class="fas fa-plus-circle prefix"></i></button>
 				</div>
 			</div>
 		</div>

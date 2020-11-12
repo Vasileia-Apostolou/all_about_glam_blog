@@ -1,19 +1,18 @@
 {% extends "base.html" %}
 {% block content %}
 
-<h2> blogpost </h2>
 
 	<ul class="collapsible">
         {% for blogpost in blogs %}
 		<li>
 			<div class="collapsible-header">
 				<i class="far fa-arrow-alt-circle-down"></i>
-				  Blog
                 <strong> {{ blogpost.blog_title }} </strong> 
 			</div>
 			<div class="collapsible-body">
 				<span>Lorem ipsum dolor sit amet.</span>
-                <p> {{ blogpost.blog_content }} </p>
+                <p> {{ blogpost.blog_content }} </p> <br>
+                <p><em>by: {{ blogpost.created_by }}</em></p>
 			</div>
 		</li>
         {% endfor %}

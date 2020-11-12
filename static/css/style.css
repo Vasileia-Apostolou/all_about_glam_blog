@@ -25,6 +25,11 @@ form {
     border: 3px solid black;
 }
 
+.collapsible {
+    background-color: white;
+}
+
+
 /* -------- LOGO -------- */
 .brand-logo {
     font-family: "Sail", cursive;
@@ -49,7 +54,7 @@ form {
     line-height: 2;
     color: #a9546f !important;
     background-color: white;
-    font-family: cursive;
+    font-family: "Quicksand", cursive;
 }
 
 /* ------ BUTTONS ------- */
