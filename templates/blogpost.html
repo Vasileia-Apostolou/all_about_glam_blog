@@ -1,22 +1,24 @@
 {% extends "base.html" %}
 {% block content %}
 
+	<form class="col s12 m8 offset-m2 blogpost-form">
+		<!--<div class="card-panel">-->
+			<ul>
+				{% for blogpost in blogs %}
+				<li>
+					<div>
+						<strong> {{ blogpost.blog_title }} </strong>
+					</div>
+					<div>
+						<p> {{ blogpost.blog_content }} </p> 
+						<p>created by {{ blogpost.created_by }} at {{ blogpost.created_at }}</p>
+                        <br>
+					</div>
+				</li>
+				{% endfor %}
+			</ul>
+	</form>
 
-	<ul class="collapsible">
-        {% for blogpost in blogs %}
-		<li>
-			<div class="collapsible-header">
-				<i class="far fa-arrow-alt-circle-down"></i>
-                <strong> {{ blogpost.blog_title }} </strong> 
-			</div>
-			<div class="collapsible-body">
-				<span>Lorem ipsum dolor sit amet.</span>
-                <p> {{ blogpost.blog_content }} </p> <br>
-                <p><em>by: {{ blogpost.created_by }}</em></p>
-			</div>
-		</li>
-        {% endfor %}
-	</ul>
 
 {% endblock %}
 

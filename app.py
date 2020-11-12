@@ -1,15 +1,16 @@
 import os
-from flask import  (
+from flask import (
     Flask, flash, render_template,
     redirect, request, session, url_for)
-from flask_pymongo import PyMongo 
-from bson.objectid import ObjectId 
+from flask_pymongo import PyMongo
+from datetime import datetime
 from werkzeug.security import generate_password_hash, check_password_hash
 if os.path.exists("env.py"):
     import env
 
 
 app = Flask(__name__)
+
 
 app.config["MONGO_DBNAME"] = os.environ.get("MONDO_DBNAME")
 app.config["MONGO_URI"] = os.environ.get("MONGO_URI")
@@ -29,20 +30,20 @@ def blog_posts():
 def register():
     if request.method == "POST":
         existing_user = mongo.db.users.find_one(
-            {"username": request.form.get("username").lower() })
+            {"username": request.form.get("username").lower()})
 
         if existing_user:
             flash("Username already exists")
             return redirect(url_for("register"))
-                
-        register = { 
-            "username": request.form.get("username").lower(), 
+
+        register = {
+            "username": request.form.get("username").lower(),
             "email_address": request.form.get("email_address").lower(),
             "password": generate_password_hash(request.form.get("password"))
         }
         mongo.db.users.insert_one(register)
 
-        session["user"] = request.form.get("username").lower() 
+        session["user"] = request.form.get("username").lower()
         flash("Account successfully created!")
         return redirect(url_for("users", username=session["username"]))
     return render_template("register.html")
@@ -56,7 +57,7 @@ def login():
 
         if existing_user:
             if check_password_hash(
-            existing_user["password"], request.form.get("password")):
+             existing_user["password"], request.form.get("password")):
                 session["username"] = request.form.get("username").lower()
                 flash("Welcome, {}".format(request.form.get("username")))
                 return redirect(url_for(
@@ -65,7 +66,7 @@ def login():
                 flash("Incorrect Username or Password")
                 return redirect(url_for("login"))
 
-        else: 
+        else:
             flash("Incorrect Username or Password")
             return redirect(url_for("login"))
 
@@ -90,22 +91,23 @@ def logout():
     return redirect(url_for("login"))
 
 
-@app.route("/create_blog", methods=["GET", "POST"])
-def create_blog():
+@app.route("/create_blogpost", methods=["GET", "POST"])
+def create_blogpost():
     if request.method == "POST":
         blog = {
             "blog_title": request.form.get("blog_title"),
             "blog_content": request.form.get("blog_content"),
-            "created_by": session["username"]
+            "created_by": session["username"],
+            "created_at": datetime.now().strftime('%H:%M')
         }
         mongo.db.blogpost.insert_one(blog)
         flash("New blog created!")
         return redirect(url_for("blog_posts"))
 
-    return render_template("create_blog.html")
+    return render_template("create_blogpost.html")
 
 
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
-    port=int(os.environ.get("PORT")),
-    debug=True)
+            port=int(os.environ.get("PORT")),
+            debug=True)

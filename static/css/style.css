@@ -1,7 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Akronim&family=Arizonia&family=Balsamiq+Sans&family=Italianno&family=Quicksand&family=Sail&family=Varela+Round&display=swap');
 
 body {
-    background: url("/static/images/bg1.jpg");
+    background: url("/static/images/bg8.jpg");
+   
+    
+    
     font-family: "Quicksand", sans-serif;
 }
 
@@ -29,6 +32,10 @@ form {
     background-color: white;
 }
 
+.blogpost-form {
+    background-color: white;
+   
+}
 
 /* -------- LOGO -------- */
 .brand-logo {
