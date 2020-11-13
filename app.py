@@ -27,6 +27,13 @@ def blog_posts():
     return render_template("blogpost.html", blogs=blogs)
 
 
+@app.route("/search", methods=["GET", "POST"])
+def search():
+    search = request.form.get("search")
+    blogs = list(mongo.db.blogpost.find({"$text": {"$search": search}}))
+    return render_template("blogpost.html", blogs=blogs)
+
+
 @app.route("/register", methods=["GET", "POST"])
 def register():
     if request.method == "POST":
