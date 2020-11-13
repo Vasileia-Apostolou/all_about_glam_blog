@@ -110,8 +110,18 @@ def create_blogpost():
 
 @app.route("/edit_post/<blogpost_id>", methods=["GET", "POST"])
 def edit_post(blogpost_id):
-    blogpost = mongo.db.blogpost.find_one({"_id": ObjectId(blogpost_id)})
+    if request.method == "POST":
+        blog = {
+            "blog_title": request.form.get("blog_title"),
+            "blog_content": request.form.get("blog_content"),
+            "created_by": session["username"],
+            "created_at": datetime.now().strftime('%H:%M')
+        }
+        mongo.db.blogpost.update({"_id": ObjectId(blogpost_id)}, blog)
+        flash("Post Updated!")
+        return redirect(url_for("blog_posts"))
 
+    blogpost = mongo.db.blogpost.find_one({"_id": ObjectId(blogpost_id)})
     return render_template("edit_post.html", blogpost=blogpost)
 
 
