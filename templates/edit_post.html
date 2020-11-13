@@ -9,20 +9,21 @@
 			<div class="row">
 				<div class="input-field col s12">
 					<i class="fas fa-pen-alt prefix"></i>
-					<input id="blog_title" name="blog_title" minlength="4" maxlength="40" type="text" class="validate" required>
+					<input id="blog_title" name="blog_title" minlength="4" maxlength="40" value="{{ blogpost.blog_title }}" type="text" class="validate" required>
 					<label for="blog_title">Blog Title</label>
 				</div>
 			</div>
             <div class="row">
 				<div class="input-field col s12">
 					<i class="fas fa-align-justify prefix"></i>
-                    <textarea id="blog_content" name="blog_content" minlength="5" maxlength="250" class="materialize-textarea validate" required></textarea>
+                    <textarea id="blog_content" name="blog_content" minlength="5" maxlength="250" class="materialize-textarea validate" required>{{ blogpost.blog_content }}</textarea>
                     <label for="blog_content">Blog Content</label>
 				</div>
 			</div>
 			<div class="row">
 				<div class="col s12 center-align">
-					<button type="submit" class="col s12 m4 offset-m4 reg-login-btn btn-large hvr-grow hvr-glow">Edit Task <i class="fas fa-edit prefix"></i></button>
+					<button type="submit" class="buttons btn hvr-grow hvr-glow">Edit Task <i class="fas fa-edit prefix"></i></button>
+                    <a href="{{ url_for('blog_posts') }}" class="btn buttons hvr-grow hvr-glow">Cancel <i class="far fa-times-circle prefix"></i></a>
 				</div>
 			</div>
 		</div>
