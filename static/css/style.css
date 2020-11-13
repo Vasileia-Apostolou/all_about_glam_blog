@@ -65,12 +65,14 @@ form {
 }
 
 /* ------ BUTTONS ------- */
-.reg-login-btn {
+.reg-login-btn,
+ .edit-delete-button {
     background-color: #f2e4e8;
     color: #a9546f;
+    margin-left: 10px;
 }
 
-.reg-login-btn:hover {
+.reg-login-btn,
+.edit-delete-button:hover {
     background-color: #e5cad2;
-    
 }
