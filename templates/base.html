@@ -24,7 +24,7 @@
                 <li><a class="nav-styling" href="{{ url_for('blog_posts') }}">Home</a></li>
 			    {% if session.username %}
 				    <li><a class="nav-styling" href="{{ url_for('users', username=session['username']) }}">Profile</a></li>
-                    <li><a class="nav-styling" href="{{ url_for('create_blogpost') }}">Create Blog</a></li>
+                    <li><a class="nav-styling" href="{{ url_for('create_blogpost') }}">Create Post</a></li>
 				    <li><a class="nav-styling" href="{{ url_for('logout') }}">Log Out</a></li>
 			    {% else %}
 			    	<li><a class="nav-styling" href="{{ url_for('register') }}">Register</a></li>
@@ -38,7 +38,7 @@
 		<li><a class="center-align nav-styling" href="{{ url_for('blog_posts') }}">Home</a></li>
 		{% if session.username %}
 				<li><a class="center-align nav-styling" href="{{ url_for('users', username=session['username']) }}">Profile</a></li>
-                <li><a class="center-align nav-styling" href="{{ url_for('create_blogpost') }}">Create Blog</a></li>
+                <li><a class="center-align nav-styling" href="{{ url_for('create_blogpost') }}">Create Post</a></li>
 				<li><a class="center-align nav-styling" href="{{ url_for('logout') }}">Log Out</a></li>
 			{% else %}
 			    <li><a class="center-align nav-styling" href="{{ url_for('register') }}">Register</a></li>

@@ -1,26 +1,28 @@
 {% extends "base.html" %}
 {% block content %}
 
-<div class="row card-panel">
-   <form action="{{ url_for('search') }}" method="post" class="col s12">
-      <div class="row valign-wrapper center-align">
-         <div class="input-field col s12 m8">
-         <i class="fas fa-search prefix"></i>
-            <input type="text" name="search" id="search" class="validate" required>
-            <label for="search">Search</label>
-         </div>
-         <div class="col s6 m6">
-            <button type="submit" class="btn buttons hvr-glow">
-                 Search <i class="fas fa-search prefix"></i>
-            </button>
-         </div>
-      </div>
-   </form>
-</div>
-
-
+	<!-- SEARCH -->
+	<div class="search-section">
+		<form action="{{ url_for('search') }}" method="post">
+			<div class="row valign-wrapper center-align">
+				<div class="input-field col s12 m8">
+					<i class="fas fa-search prefix"></i>
+					<input type="text" name="search" id="search" class="validate" required>
+					<label for="search">Search</label>
+				</div>
+				<div class="col s12 m4">
+					<button type="submit" class="btn buttons hvr-glow">
+	                 Search <i class="fas fa-search prefix"></i>
+	            </button>
+				</div>
+			</div>
+		</form>
+	</div>
+	<!-- SEARCH -->
+  
+    <!-- HOME PAGE -->
     {% if blogs|length > 0 %}
-	<form class="col s12 m8 offset-m2 blogpost-form">
+    <form class="col s12 m8 offset-m2 blogpost-form">
 		<!--<div class="card-panel">-->
 			<ul>
 				{% for blogpost in blogs %}
@@ -44,8 +46,9 @@
 			</ul>
 	</form>
     {% else %}
-       <h4 class="center-align">No Results Found</h4>
+       <h4 class="center-align no-results">No Results Found</h4>
     {% endif %}
+    <!-- HOME PAGE -->
 
 
 {% endblock %}

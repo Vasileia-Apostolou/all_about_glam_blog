@@ -2,52 +2,25 @@
 
 body {
     background: url("/static/images/bg8.jpg");
-   
-    
-    
     font-family: "Quicksand", sans-serif;
 }
 
-h3 {
+.page-title {
     background-color: white;
     color: #8f475e;
     line-height: 70px;
-    border: 4px ridge black;
+    border: 3px ridge black;
     text-transform: uppercase;
-}
-
-h4 {
-    color: white;
-    text-shadow: 2px 1px 2px black;
 }
 
 small a {
     color: #8f475e;
 }
 
-form {
-    margin-top: 5%;
-}
-
-.card-panel {
-    border: 3px solid black;
-}
-
-.collapsible {
-    background-color: white;
-}
-
-.blogpost-form {
-    background-color: white;
-   
-}
-
 /* -------- LOGO -------- */
 .brand-logo {
     font-family: "Sail", cursive;
-    font-size: 20%;
     color: #a9546f !important;
-    margin-left: 30px;
 }
 
 /* --------- NAVBAR --------- */
@@ -79,3 +52,41 @@ form {
 .buttons:hover {
     background-color: #e5cad2;
 }
+
+/* ------- USERS PROFILE ------- */
+.users-profile {
+    background-color: white;
+    color: #8f475e;
+    line-height: 70px;
+    text-transform: capitalize;
+}
+
+/* ------- FORMS -------- */
+form {
+    margin-top: 5%;
+}
+
+.blogpost-form {
+    background-color: white;
+}
+
+.card-panel {
+    border: 3px solid black;
+}
+
+/* -------- SEARCH SECTION --------- */
+.search-section {
+    background-color: white;
+}
+
+.no-results {
+    color: white;
+    text-shadow: 2px 1px 2px black;
+}
+
+
+
+/* ------- MEDIA QUERIES -------- */
+
+
+
