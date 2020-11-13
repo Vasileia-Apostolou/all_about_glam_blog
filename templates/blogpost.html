@@ -14,7 +14,7 @@
 						<p>created by {{ blogpost.created_by }} at {{ blogpost.created_at }}</p>
                         <br>
 						<div class="col s3">
-							<a href="" class="btn-small edit-delete-button hvr-grow hvr-glow">Edit</a>
+							<a href="{{ url_for('edit_post', blogpost_id=blogpost._id) }}" class="btn-small edit-delete-button hvr-grow hvr-glow">Edit</a>
                             <a href="" class="btn-small edit-delete-button hvr-grow hvr-glow">Delete</a>
 						</div>
 					</div>

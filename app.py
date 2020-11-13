@@ -4,6 +4,7 @@ from flask import (
     redirect, request, session, url_for)
 from flask_pymongo import PyMongo
 from datetime import datetime
+from bson.objectid import ObjectId
 from werkzeug.security import generate_password_hash, check_password_hash
 if os.path.exists("env.py"):
     import env
@@ -105,6 +106,13 @@ def create_blogpost():
         return redirect(url_for("blog_posts"))
 
     return render_template("create_blogpost.html")
+
+
+@app.route("/edit_post/<blogpost_id>", methods=["GET", "POST"])
+def edit_post(blogpost_id):
+    blogpost = mongo.db.blogpost.find_one({"_id": ObjectId(blogpost_id)})
+
+    return render_template("edit_post.html", blogpost=blogpost)
 
 
 if __name__ == "__main__":
