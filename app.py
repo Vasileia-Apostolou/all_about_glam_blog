@@ -44,7 +44,7 @@ def register():
         }
         mongo.db.users.insert_one(register)
 
-        session["user"] = request.form.get("username").lower()
+        session["username"] = request.form.get("username").lower()
         flash("Account successfully created!")
         return redirect(url_for("users", username=session["username"]))
     return render_template("register.html")
