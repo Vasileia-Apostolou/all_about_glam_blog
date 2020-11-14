@@ -18,16 +18,29 @@ small a {
 }
 
 /* -------- LOGO -------- */
-.brand-logo {
+nav .brand-logo {
+    font-family: "Sail", cursive;
+    color: #a9546f !important;
+    font-size: 30px;
+    margin-left: 20px;
+}
+
+.brand-logo-mobile {
+    font-size: 25px;
     font-family: "Sail", cursive;
     color: #a9546f !important;
 }
 
 /* --------- NAVBAR --------- */
 .nav-styling {
-    font-size: 18px;
+    font-size: 17px;
     color: #a9546f !important;
     margin-left: 40px;
+}
+
+.nav-styling-mobile {
+    font-size: 18px;
+    color: #a9546f !important;
 }
 
 .nav-wrapper {
@@ -88,5 +101,10 @@ form {
 
 /* ------- MEDIA QUERIES -------- */
 
+@media only screen and (max-width: 450px) {
+   nav .brand-logo {
+    font-size: 20px;
+}
+}
 
 
