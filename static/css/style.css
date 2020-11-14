@@ -2,6 +2,7 @@
 
 body {
     background: url("/static/images/bg8.jpg");
+    background-size: cover;
     font-family: "Quicksand", sans-serif;
 }
 
@@ -72,6 +73,10 @@ nav .brand-logo {
     color: #8f475e;
     line-height: 70px;
     text-transform: capitalize;
+}
+
+.users-details {
+    font-size: 20px;
 }
 
 /* ------- FORMS -------- */
