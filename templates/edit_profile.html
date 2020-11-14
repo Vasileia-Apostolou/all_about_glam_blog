@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% block content %}
+
+
+<h4 class="center-align page-title">Edit Profile</h4>
+
+<div class="row">
+	<form class="col s12" method="POST" action="{{ url_for('edit_profile', users_id=users._id) }}">
+		<div class="card-panel">
+			<div class="row">
+				<div class="input-field col s12">
+					<i class="fas fa-pen-alt prefix"></i>
+					<input id="username" name="username" value="{{ users.username }}" type="text" class="validate">
+					<label for="username">Username</label>
+				</div>
+			</div>
+            <div class="row">
+				<div class="input-field col s12">
+					<i class="fas fa-align-justify prefix"></i>
+                    <input id="email_address" name="email_address" value="{{ users.email_address }}" type="text" class="validate"></input>
+                    <label for="email_address">Email Address</label>
+				</div>
+                <div class="row">
+				<div class="input-field col s12">
+					<i class="fas fa-align-justify prefix"></i>
+                    <input id="password" name="password" value="{{ users.password }}" type="text" class="validate"></input>
+                    <label for="password">Password</label>
+				</div>
+			</div>
+            <br>
+			<div class="row">
+				<div class="col s12 center-align">
+					<button type="submit" class="buttons btn hvr-grow hvr-glow">Edit Profile <i class="fas fa-edit prefix"></i></button>
+                    <a href="{{ url_for('blog_posts') }}" class="btn buttons hvr-grow hvr-glow">Cancel <i class="far fa-times-circle prefix"></i></a>
+				</div>
+			</div>
+		</div>
+	</form>
+</div>
+
+
+{% endblock %}
