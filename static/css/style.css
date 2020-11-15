@@ -18,6 +18,15 @@ small a {
     color: #8f475e;
 }
 
+.card-horizontal {
+    background-color: white;
+}
+
+img {
+    width: 200px;
+    height: 350px;
+}
+
 /* -------- LOGO -------- */
 nav .brand-logo {
     font-family: "Sail", cursive;
@@ -84,9 +93,6 @@ form {
     margin-top: 5%;
 }
 
-.blogpost-form {
-    background-color: white;
-}
 
 .card-panel {
     border: 3px solid black;
