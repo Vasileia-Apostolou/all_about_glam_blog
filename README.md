@@ -2,6 +2,35 @@ Milestone Project : Data Centric Development - Code Institute
 
 ## Table Of Content 
 
+-[**About**](#About)
+  -[**Why This Project?**](#Why-This-Project?)
+-[**UX**](#UX)
+  -[**User Stories**](#User-Stories)
+  -[**Wireframes**](#Wireframes)
+-[**Features**](#Features)
+  -[**Functionality**](#Functionality)
+  -[**Existing Feautures**](#Existing-Features)
+  -[**Features Left To Implement**](#Features-Left-To-Implement)
+-[**Technologies Used**](#Technologies-Used)
+  -[**Languages**](#Languages)
+  -[**Tools**](#Tools)
+  -[**Libraries**](#Libraries)
+  -[**Frameworks**](#Frameworks)
+  -[**Hosting**](#Hosting)
+-[**Testing**](#Testing)
+  -[**Browesers And Divices**](#Browesers-And-Divices)
+  -[**Testing User Stories**](#Testing-User-Stories)
+  -[**Resolved Bugs**](#Resolved-Bugs)
+  -[**Unresolved Bugs**](#Unresolved-Bugs)
+  -[**Code Validation**](#Code-Validation)
+-[**Deployment**](#Deployment)
+-[**Credits**](#Credits)
+  -[**Content**](#Content)
+  -[**Acknowledgements**](#Acknowledgements)
+  -[**Media**](#Media)
+  -[**Disclaimer**](#Disclaimer)  
+
+
 ## About
 This application is a blogpost and it was created for users to get inspired and share anything related to beauty. Users can create an account where they can add as many blogposts as they like for free! Plus they can update or edit their posts and profile account. 
 
