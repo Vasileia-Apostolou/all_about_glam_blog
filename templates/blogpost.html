@@ -4,15 +4,15 @@
 	<!-- SEARCH -->
 	<div class="search-section">
 		<form action="{{ url_for('search') }}" method="post">
-			<div class="row valign-wrapper center-align">
-				<div class="input-field col s6 m8">
-					<i class="fas fa-search prefix"></i>
+			<div class="valign-wrapper center-align">
+				<div class="input-field col s6 offset-s6">
+					<i class="fas fa-search prefix search-icon"></i>
 					<input type="text" name="search" id="search" class="validate" required>
 					<label for="search">Search</label>
 				</div>
 				<div class="col s6 m4">
-					<button type="submit" class="btn buttons hvr-glow">
-	                 Search <i class="fas fa-search prefix"></i>
+					<button type="submit" class="btn-small search-button buttons hvr-glow hvr-grow">
+	                 Search <i class="fas fa-search prefix small-seach-icon"></i>
 	            </button>
 				</div>
 			</div>
@@ -34,11 +34,13 @@
 					<p>created by {{ blogpost.created_by }} at {{ blogpost.created_at }}</p>
 					<br>
 					<div class="col s3">
+                        <a href=""
+				            class="btn-small buttons hvr-grow hvr-glow">View Post</a>
 						{% if session.username|lower == blogpost.created_by|lower %}
-						<a href="{{ url_for('edit_post', blogpost_id=blogpost._id) }}"
-							class="btn-small buttons hvr-grow hvr-glow">Edit</a>
 						<a href="{{ url_for('delete_post', blogpost_id=blogpost._id) }}"
-							class="btn-small buttons hvr-grow hvr-glow">Delete</a>
+							class="btn-small buttons post-buttons hvr-grow hvr-glow">Delete</a>
+                        <a href="{{ url_for('edit_post', blogpost_id=blogpost._id) }}"
+							class="btn-small buttons post-buttons hvr-grow hvr-glow">Edit</a>
 						{% endif %}
 					</div>
 				</div>

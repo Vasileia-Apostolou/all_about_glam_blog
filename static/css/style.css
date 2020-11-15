@@ -3,14 +3,18 @@
 body {
     background: url("/static/images/bg8.jpg");
     background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+
     font-family: "Quicksand", sans-serif;
 }
 
 .page-title {
-    background-color: white;
+    background-color: #fffefe;
     color: #8f475e;
     line-height: 70px;
-    border: 3px ridge black;
+    border: 3px ridge #8f475e;
     text-transform: uppercase;
 }
 
@@ -76,6 +80,10 @@ nav .brand-logo {
     background-color: #e5cad2;
 }
 
+.post-buttons {
+    float: right;
+}
+
 /* ------- USERS PROFILE ------- */
 .users-profile {
     background-color: white;
@@ -95,12 +103,17 @@ form {
 
 
 .card-panel {
-    border: 3px solid black;
+    border: 3px solid #8f475e;
+    background-color: #fffefe;
 }
 
 /* -------- SEARCH SECTION --------- */
 .search-section {
-    background-color: white;
+}
+
+.search-icon {
+    color: #b0617a;
+    font-size: 15px;
 }
 
 .no-results {
@@ -141,6 +154,15 @@ form {
    nav .brand-logo {
     font-size: 20px;
 }
+}
+
+@media only screen and (max-width: 600px) {
+    .search-button {
+    line-height: 16px;
+}
+    .small-seach-icon {
+        display: none;
+    }
 }
 
 
