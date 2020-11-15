@@ -6,6 +6,7 @@
   - [**Why This Project?**](#Why-This-Project?)
 - [**UX**](#UX)
   - [**User Stories**](#User-Stories)
+  - [**Research**](#Research)
   - [**Wireframes**](#Wireframes)
   - [**Design**](#Design)
 - [**Features**](#Features)
@@ -50,10 +51,13 @@ This application was created for my 3rd Project with Data Centric Development fo
 * As a user, I want to be able to delete my blog posts.
 * As a user, I want to be able to my profile account.
 
+### Research
+I researched tutorials with Python and MongoDB on Youtube and Udemy, to understand more how to create a CRUD application and I could get a clear idea of what functionality and design I wanted my web application to have, however most of this project's user authentication functionality was taken from [Code Institute's](https://codeinstitute.net/) task manager mini project.
+
 ### Wireframes
 
 ### Design
-I wanted a pink color scheme for this project to give a girly and fun look. 
+I wanted a pink color scheme for this project to give a girly and fun look. For the background I used a glittery fuchsia image and I kept the color of the navbar, footer and buttons the same color of light pink. All form have a white background with black text and icons. 
 
 ## Features
 
