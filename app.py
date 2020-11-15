@@ -164,6 +164,11 @@ def delete_profile(users_id):
     return redirect(url_for("blog_posts"))
 
 
+@app.route("/view_post/<blogpost_id>")
+def view_post(blogpost_id):
+    blogpost = mongo.db.blogpost.find_one({"_id": ObjectId(blogpost_id)})
+    return render_template("view_post.html", blogpost=blogpost)
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),

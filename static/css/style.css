@@ -6,7 +6,6 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
-
     font-family: "Quicksand", sans-serif;
 }
 
@@ -22,14 +21,11 @@ small a {
     color: #8f475e;
 }
 
-.card-horizontal {
-    background-color: white;
-}
-
-img {
+.img-input {
     width: 200px;
     height: 350px;
 }
+
 
 /* -------- LOGO -------- */
 nav .brand-logo {
@@ -44,6 +40,7 @@ nav .brand-logo {
     font-family: "Sail", cursive;
     color: #a9546f !important;
 }
+
 
 /* --------- NAVBAR --------- */
 .nav-styling {
@@ -61,6 +58,7 @@ nav .brand-logo {
     background-color: #f2e4e8;
 }
 
+
 /* ------- FLASHED MESSAGES ------- */
 .flashes h4 {
     line-height: 2;
@@ -68,6 +66,7 @@ nav .brand-logo {
     background-color: white;
     font-family: "Quicksand", cursive;
 }
+
 
 /* ------ BUTTONS ------- */
 .buttons {
@@ -84,6 +83,7 @@ nav .brand-logo {
     float: right;
 }
 
+
 /* ------- USERS PROFILE ------- */
 .users-profile {
     background-color: white;
@@ -96,16 +96,21 @@ nav .brand-logo {
     font-size: 20px;
 }
 
+
 /* ------- FORMS -------- */
 form {
     margin-top: 5%;
 }
 
-
 .card-panel {
     border: 3px solid #8f475e;
     background-color: #fffefe;
 }
+
+.card-horizontal {
+    background-color: white;
+}
+
 
 /* -------- SEARCH SECTION --------- */
 .search-section {
@@ -121,14 +126,11 @@ form {
     text-shadow: 2px 1px 2px black;
 }
 
+
 /* -------- FOOTER -------- */
 .page-footer {
     background-color: #f2e4e8;
     color: #a9546f !important;
-    position: fixed;
-   left: 0;
-   bottom: 0;
-   width: 100%;
 }
 
 .social-icons {
@@ -146,14 +148,12 @@ form {
 }
 
 
-
-
 /* ------- MEDIA QUERIES -------- */
 
 @media only screen and (max-width: 450px) {
    nav .brand-logo {
     font-size: 20px;
-}
+   }
 }
 
 @media only screen and (max-width: 600px) {
