@@ -124,7 +124,7 @@ def edit_post(blogpost_id):
             "blog_image": request.form.get("blog_image"),
             "blog_content": request.form.get("blog_content"),
             "created_by": session["username"],
-            "created_at": datetime.now().strftime("Y/m/d H:i:s")
+            "created_at": datetime.utcnow().strftime('%B %d %Y')
         }
         mongo.db.blogpost.update({"_id": ObjectId(blogpost_id)}, blog)
         flash("Post Updated!")

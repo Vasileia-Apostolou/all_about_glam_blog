@@ -83,6 +83,10 @@ nav .brand-logo {
     float: right;
 }
 
+.modal-buttons {
+    display: flex;
+}
+
 
 /* ------- USERS PROFILE ------- */
 .users-profile {

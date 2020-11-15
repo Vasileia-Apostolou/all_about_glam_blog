@@ -68,15 +68,24 @@ I wanted a pink color scheme for this project to give a girly and fun look. For 
 The web application uses Python login to allow user to register or login to their account for free and in addition it offers CRUD operations which allows users to create, read, update and delete their posts or profile account.
 
 ### Existing Features
-* Register 
+- **Register** -
+
  Users can create their own account for free by filling the form and providing a username, email address and password which are stored in the database. The Form cannot be submitted if the username already exists or the email address has already been used. The users have to repeat their password to ensure there are no mistakes. The users passwords are hashed for security purposes.
-* Login 
+
+- **Login** - 
+
 The login form has a username and password field which if correctly put in the users can login in their account.
-* Logout 
+
+- **Logout** - 
+
 Users can logout of their account by clicking "Logout" in the navbar. 
-* Users Profile
+
+- **Users Profile** -
+
 Users who are logged in can visit their profile page and view their personal information. Users are also allowed to edit or delete their profile.
-* NavBar
+
+- **NavBar** -
+
 The navbar link vary depending on whether the user is logged in or not. If the user is logged in, the navbar will have Home, Profile, Create Post and Logout links. If the user is logged out, the navbar will have Home, Register and Login links.
 
 
