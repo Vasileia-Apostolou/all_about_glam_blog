@@ -102,6 +102,31 @@ form {
     text-shadow: 2px 1px 2px black;
 }
 
+/* -------- FOOTER -------- */
+.page-footer {
+    background-color: #f2e4e8;
+    color: #a9546f !important;
+    position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+}
+
+.social-icons {
+    font-size: 30px;
+    color: #824155;
+    margin-left: 20px;
+}
+
+.social-icons:hover {
+    color: #b0617a;
+}
+
+.socials {
+    display: flex;
+}
+
+
 
 
 /* ------- MEDIA QUERIES -------- */
