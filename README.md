@@ -18,6 +18,7 @@
   - [**Tools**](#Tools)
   - [**Libraries**](#Libraries)
   - [**Frameworks**](#Frameworks)
+  - [**Database**](#Database)
   - [**Hosting**](#Hosting)
 - [**Testing**](#Testing)
   - [**Browesers And Divices**](#Browesers-And-Divices)
@@ -69,27 +70,44 @@ The web application uses Python login to allow user to register or login to thei
 
 ### Existing Features
 - **Register** -
-
- Users can create their own account for free by filling the form and providing a username, email address and password which are stored in the database. The Form cannot be submitted if the username already exists or the email address has already been used. The users have to repeat their password to ensure there are no mistakes. The users passwords are hashed for security purposes.
+ Users can create their own account for free by filling the form and providing a username, email address and password which are required and stored in the database. The Form cannot be submitted if the username already exists or the email address has already been used. The users have to repeat their password to ensure there are no mistakes. The users passwords are hashed for security purposes.
 
 - **Login** - 
-
 The login form has a username and password field which if correctly put in the users can login in their account.
 
 - **Logout** - 
-
 Users can logout of their account by clicking "Logout" in the navbar. 
 
 - **Users Profile** -
-
 Users who are logged in can visit their profile page and view their personal information. Users are also allowed to edit or delete their profile.
 
-- **NavBar** -
+- **Create Post** -
+Users can click on "Create Post" link in the navbar and will be directed to a form that has to be filled in with post title, image (optional), and content in order to create a new post. When the user clicks on the "Create Post" button, they will be redirected to the home page where they will be able to see their post.
 
+- **Edit Post** -
+If the users want to update their post, they can click on the "Edit" button which appears at the bottom of their post. Also when they click on the "View Post" button, the post will open in a seperate page where they will still have the option of updating their post. Once the "Edit" button is clicked, a form will display in a separate page with the title, image url and content already written as it is. Then changes in the inputs can be made and updated by clicking on the "Update" button. In case the users change their mind on updating their post, there is a "Cancel" button which will redirect them to the home page. Users can only edit their post and not others.
+
+- **Delete Post** -
+If the users want to delete their post, they can click on the "Delete" button which appears at the bottom of their post. Also when they click on the "View Post" button, the post will open in a seperate page where they will still have the option of deleting their post. Once the "delete" button is clicked, a pop-up will appear with the message "Are you sure you want to delete this post?". Then the user has the option of deleting the post by clicking the "Delete" button or cancel with the "Cancel" button. Users can only delete their post and not others.
+
+- **View Post** -
+On the bottom left of every post there is a "View Post" button which opens the post in a seperate page and displays the full post when its clicked. The user who created that post has the option of editing or deleting the post.
+
+- **NavBar** -
 The navbar link vary depending on whether the user is logged in or not. If the user is logged in, the navbar will have Home, Profile, Create Post and Logout links. If the user is logged out, the navbar will have Home, Register and Login links.
+
+- **Flash Messages** - 
+Based on the user interaction, flash messages are displayed at the top of the page rigth below the navbar. Flash messages let users know if their actions are successfully completed or failed.
 
 
 ### Features Left To Implement 
+
+- **Users Profile** -
+In the future, I would like the Users Profile to display all their information, give the user the option of uploading a profile picture and the option of changing their information or password.
+
+- **Share**-
+In the future, I would like to add a feature which allows the users to share their post which others on social media.
+
 
 ## Technologies Used 
 
@@ -132,9 +150,9 @@ Chrome DevTools is a set of web developer tools built directly into the Google C
 
 2. Fonts were taken from [Google Fonts](https://fonts.google.com/).
 
-3. [Materialize](https://materializecss.com/)
+3. [Materialize](https://materializecss.com/) UI components help in constructing attractive, consistent, and functional web pages and web apps, while adhering to modern web design principles such as browser portability, device independence, and graceful degradation.
 
-Materialize UI components help in constructing attractive, consistent, and functional web pages and web apps, while adhering to modern web design principles such as browser portability, device independence, and graceful degradation.
+4. [PyMongo](https://pymongo.readthedocs.io/en/stable/) was used as the Python API for MongoDB. This API enables linking the data from the back-end database to the front-end app.
 
 ### Frameworks 
 1. [jQuery](https://jquery.com/)
@@ -145,6 +163,10 @@ jQuery is a fast, small, and feature-rich JavaScript library. It was used in thi
 
 Flask is a micro web framework written in Python. 
 
+3. [Jinja](https://jinja.palletsprojects.com/en/2.11.x/) is a modern and designer-friendly templating language for Python. I used Jinja to simplify my HTML code, avoid repetition, and allow simpler linking of the back-end to the front-end.
+
+### Database
+[MongoDB](https://www.mongodb.com/) was used to store the database. The informatio displayed in the front-end app is pulled from the database store.
 
 ### Hosting 
 * [Heroku](https://www.heroku.com/)
