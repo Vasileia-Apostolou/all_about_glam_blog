@@ -1,34 +1,35 @@
-Milestone Project : Data Centric Development - Code Institute 
+# [All About Glam]() - Milestone Project : Data Centric Development - Code Institute 
 
 ## Table Of Content 
 
--[**About**](#About)
-  -[**Why This Project?**](#Why-This-Project?)
--[**UX**](#UX)
-  -[**User Stories**](#User-Stories)
-  -[**Wireframes**](#Wireframes)
--[**Features**](#Features)
-  -[**Functionality**](#Functionality)
-  -[**Existing Feautures**](#Existing-Features)
-  -[**Features Left To Implement**](#Features-Left-To-Implement)
--[**Technologies Used**](#Technologies-Used)
-  -[**Languages**](#Languages)
-  -[**Tools**](#Tools)
-  -[**Libraries**](#Libraries)
-  -[**Frameworks**](#Frameworks)
-  -[**Hosting**](#Hosting)
--[**Testing**](#Testing)
-  -[**Browesers And Divices**](#Browesers-And-Divices)
-  -[**Testing User Stories**](#Testing-User-Stories)
-  -[**Resolved Bugs**](#Resolved-Bugs)
-  -[**Unresolved Bugs**](#Unresolved-Bugs)
-  -[**Code Validation**](#Code-Validation)
--[**Deployment**](#Deployment)
--[**Credits**](#Credits)
-  -[**Content**](#Content)
-  -[**Acknowledgements**](#Acknowledgements)
-  -[**Media**](#Media)
-  -[**Disclaimer**](#Disclaimer)  
+- [**About**](#About)
+  - [**Why This Project?**](#Why-This-Project?)
+- [**UX**](#UX)
+  - [**User Stories**](#User-Stories)
+  - [**Wireframes**](#Wireframes)
+  - [**Design**](#Design)
+- [**Features**](#Features)
+  - [**Functionality**](#Functionality)
+  - [**Existing Feautures**](#Existing-Features)
+  - [**Features Left To Implement**](#Features-Left-To-Implement)
+- [**Technologies Used**](#Technologies-Used)
+  - [**Languages**](#Languages)
+  - [**Tools**](#Tools)
+  - [**Libraries**](#Libraries)
+  - [**Frameworks**](#Frameworks)
+  - [**Hosting**](#Hosting)
+- [**Testing**](#Testing)
+  - [**Browesers And Divices**](#Browesers-And-Divices)
+  - [**Testing User Stories**](#Testing-User-Stories)
+  - [**Resolved Bugs**](#Resolved-Bugs)
+  - [**Unresolved Bugs**](#Unresolved-Bugs)
+  - [**Code Validation**](#Code-Validation)
+- [**Deployment**](#Deployment)
+- [**Credits**](#Credits)
+  - [**Content**](#Content)
+  - [**Acknowledgements**](#Acknowledgements)
+  - [**Media**](#Media)
+  - [**Disclaimer**](#Disclaimer)  
 
 
 ## About
@@ -41,11 +42,18 @@ This application was created for my 3rd Project with Data Centric Development fo
 
 ### User Stories
 * As a user, I want to be able to create my own account.
+* As a user, I want to be able to log in and out of my account.
+* As a user, I want to be able to create a blog post.
 * As a user, I want to read inspiring posts from the web application.
-* As a user, I want to be able to update my post or profile.
-* As a user, I want to be able to delete any of my posts or even my profile account.
+* As a user, I want to be able to edit and update my blog posts.
+* As a user, I want to be able to edit my profile account.
+* As a user, I want to be able to delete my blog posts.
+* As a user, I want to be able to my profile account.
 
 ### Wireframes
+
+### Design
+I wanted a pink color scheme for this project to give a girly and fun look. 
 
 ## Features
 
