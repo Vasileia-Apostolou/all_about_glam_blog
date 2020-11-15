@@ -22,10 +22,13 @@
   
     <!-- HOME PAGE -->
     {% if blogs|length > 0 %}
+      {% for blogpost in blogpost%}
     <form class="col s12 m8 offset-m2 blogpost-form">
-		<!--<div class="card-panel">-->
+		<div class="card horizontal">
+           <div class="card-image">
+              <img src="{{ blogpost.blog_image }}" alt="User image input">
+           </div>
 			<ul>
-				{% for blogpost in blogs %}
 				<li>
 					<div>
 						<strong> {{ blogpost.blog_title }} </strong>

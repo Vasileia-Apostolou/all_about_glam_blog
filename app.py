@@ -104,6 +104,7 @@ def create_blogpost():
     if request.method == "POST":
         blog = {
             "blog_title": request.form.get("blog_title"),
+            "blog_image": request.form.get("blog_image"),
             "blog_content": request.form.get("blog_content"),
             "created_by": session["username"],
             "created_at": datetime.now().strftime('%H:%M')
@@ -120,6 +121,7 @@ def edit_post(blogpost_id):
     if request.method == "POST":
         blog = {
             "blog_title": request.form.get("blog_title"),
+            "blog_image": request.form.get("blog_image"),
             "blog_content": request.form.get("blog_content"),
             "created_by": session["username"],
             "created_at": datetime.now().strftime("Y/m/d H:i:s")
