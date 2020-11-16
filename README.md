@@ -21,7 +21,7 @@
   - [**Database**](#Database)
   - [**Hosting**](#Hosting)
 - [**Testing**](#Testing)
-  - [**Browsers](#Browsers)
+  - [**Browsers**](#Browsers)
   - [**Devices**](#Devices)
   - [**Testing User Stories**](#Testing-User-Stories)
   - [**Resolved Bugs**](#Resolved-Bugs)
@@ -74,7 +74,7 @@ The web application uses Python login to allow user to register or login to thei
 
 ### Existing Features
 - **Register** -
- Users can create their own account for free by filling the form and providing a username, email address and password which are required and stored in the database. The Form cannot be submitted if the username already exists or the email address has already been used. The users have to repeat their password to ensure there are no mistakes. The users passwords are hashed for security purposes.
+ Users can create their own account for free by filling the form and providing a username, email address and password which are required and stored in the database. The Form cannot be submitted if the username already exists but can create multiple accounts with the same email address. The users have to repeat their password to ensure there are no mistakes. The users passwords are hashed for security purposes.
 
 - **Login** - 
 The login form has a username and password field which if correctly put in the users can login in their account.
@@ -199,7 +199,36 @@ This web application was tested in the following browsers to ensure the web appl
  * MacBook Pro
 
  ### Testing User Stories
- 
+- **As a user, I want to be able to create my own account.** -
+ 1. Click on the "Register" link in the navbar.
+ 2. Fill in the Register Form with a username, email address, password and repeat password.
+ 3. Click on "Register" button.
+ 4. Flash message will appear saying "Account successfully created!"
+
+- **As a user, I want to be able to log in and out of my account.** -
+  * LOGIN 
+  1. Click on the "Login" link in the navbar.
+  2. Fill in the Login Form with your username and password.
+  3. Click on the "Login" button. 
+  4. Flash message will appear saying "Welcome, (username)"
+  * LOGOUT 
+  1. Click on the "Logout" link in the navbar.
+  2. Flash message will appear saying "You have been logged out!"
+
+- **As a user, I want to be able to create a blog post.** -
+ 1. Click on the "Create Post" link in the navbar.
+ 2. Fill in the Form with a post title, image URL(optional)and content.
+ 3. Click on "Create Post" button.
+ 4. Flash message will appear saying "New post created"
+
+- **As a user, I want to read inspiring posts from the web application.** -
+ 1. Click on the "Home" link in the navbar 
+
+* As a user, I want to be able to edit and update my blog posts.
+* As a user, I want to be able to edit my profile account.
+* As a user, I want to be able to delete my blog posts.
+* As a user, I want to be able to my profile account.
+
 
  ### Resolved Bugs
 

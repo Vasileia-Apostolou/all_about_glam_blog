@@ -110,7 +110,7 @@ def create_blogpost():
             "created_at": datetime.now().strftime('%H:%M')
         }
         mongo.db.blogpost.insert_one(blog)
-        flash("New blog created!")
+        flash("New post created!")
         return redirect(url_for("blog_posts"))
 
     return render_template("create_blogpost.html")
