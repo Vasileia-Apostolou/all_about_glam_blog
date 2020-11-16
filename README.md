@@ -21,7 +21,8 @@
   - [**Database**](#Database)
   - [**Hosting**](#Hosting)
 - [**Testing**](#Testing)
-  - [**Browesers And Divices**](#Browesers-And-Divices)
+  - [**Browsers](#Browsers)
+  - [**Devices**](#Devices)
   - [**Testing User Stories**](#Testing-User-Stories)
   - [**Resolved Bugs**](#Resolved-Bugs)
   - [**Unresolved Bugs**](#Unresolved-Bugs)
@@ -96,8 +97,18 @@ If the users want to delete their post, they can click on the "Delete" button wh
 - **View Post** -
 On the bottom left of every post there is a "View Post" button which opens the post in a seperate page and displays the full post when its clicked. The user who created that post has the option of editing or deleting the post.
 
+- **Blog Post** - 
+Blog posts are displayed in the home page from olderst to newest.
+
 - **NavBar** -
-The navbar link vary depending on whether the user is logged in or not. If the user is logged in, the navbar will have Home, Profile, Create Post and Logout links. If the user is logged out, the navbar will have Home, Register and Login links.
+The navbar link vary depending on whether the user is logged in or not. If the user is logged in, the navbar will have Home, Profile, Create Post and Logout links. If the user is logged out, the navbar will have Home, Register and Login links. The navbar collapses to a hamburger menu when viewed in smaller screen sizes.
+
+- **Search** -
+The user can search a particular blog post by typing a word/words in the search bar. If there's any post that include the searched word/words, the post will appear in a seperate page below the search bar. If there's more than one post found, then all of them will display. If there are no results for that search then a text of "No Results Found" will display in a separate page.
+Example : If the user searches the word "makeup" all posts that include "makeup" in the title or content will appear.
+
+- **Footer** -
+The footer includes a small "About" paragraph and social media links.
 
 - **Flash Messages** - 
 Based on the user interaction, flash messages are displayed at the top of the page rigth below the navbar. Flash messages let users know if their actions are successfully completed or failed.
@@ -106,7 +117,7 @@ Based on the user interaction, flash messages are displayed at the top of the pa
 ### Features Left To Implement 
 
 - **Users Profile** -
-In the future, I would like the Users Profile to display all their information, give the user the option of uploading a profile picture and the option of changing their information or password.
+In the future, I would like the Users Profile to display all their information, give the user the option of uploading a profile picture and the option of changing their information or password. Plus I would like to give them the option of editing or deleting their account.
 
 - **Share**-
 In the future, I would like to add a feature which allows the users to share their post which others on social media.
@@ -172,6 +183,31 @@ Chrome DevTools is a set of web developer tools built directly into the Google C
 
 ## Testing
 
+### Browsers
+This web application was tested in the following browsers to ensure the web application is compatible and responsive.
+ * Chrome
+ * Mozilla
+ * Safari
+ * Opera 
+ * Internet Explorer
+
+ ### Devices
+ This web application was tested in the following devices to ensure the web application is compatible and responsive.
+ * IPhone 8 Plus
+ * Huawei P30 Pro 
+ * Huawei Mediapad T5
+ * MacBook Pro
+
+ ### Testing User Stories
+ 
+
+ ### Resolved Bugs
+
+ ### Unresolved Bugs
+
+### Code Validation
+The web application's HTML and CSS code has been tested in [W3C Validator](https://validator.w3.org/). The JavaScript code has been tested in [JS Hint](https://jshint.com/). Python syntax has been tested in [Pep8 Online Tool](http://pep8online.com/) and responsiveness was tested in [Resposinator](https://www.responsinator.com/), [Am I Responsive](http://ami.responsivedesign.is/) and [Mobile-Friendly Test](https://search.google.com/test/mobile-friendly).
+
 ## Deployment 
 * [Live App Link](https://all-about-glam-blog.herokuapp.com/)
 * [Repository Link](https://github.com/Vasileia-Apostolou/all_about_glam_blog)
@@ -226,7 +262,12 @@ To run my code locally, users can download a local copy of my code to their desk
 11. You should now be able to run the app locally using the `python3 app.py` command.
 
 ## Credits 
-* README.md file was inspired by [this](https://github.com/hebs87/cookbook-milestone-project-three/blob/master/README.md) README file.
+
+### Content
+* Modal Structure HTML and JavaScript code was taken from [Materialize](https://materializecss.com/modals.html).
+* Forms Structure was taken from [Materialize Forms](https://materializecss.com/text-inputs.html).
+* NavBar HTML and JavaScript code was taken from [Materialize NavBar](https://materializecss.com/navbar.html).
+
 
 ### Media 
 * Background Image was taken from [Google] Images.
@@ -239,4 +280,4 @@ To run my code locally, users can download a local copy of my code to their desk
 ### Disclaimer
 This project is for educational purposes only.
 
-[Back to the top ↑](#All-About-Glam)
+[Back to the top ↑](#all-about-glam-blog)
