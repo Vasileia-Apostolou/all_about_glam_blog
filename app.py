@@ -1,4 +1,5 @@
 import os
+import pymongo
 from flask import (
     Flask, flash, render_template,
     redirect, request, session, url_for)
@@ -23,7 +24,8 @@ mongo = PyMongo(app)
 @app.route("/")
 @app.route("/blog_posts")
 def blog_posts():
-    blogs = list(mongo.db.blogpost.find())
+    blogs = list(mongo.db.blogpost.find().sort(
+        'created_at', pymongo.DESCENDING))
     return render_template("blogpost.html", blogs=blogs)
 
 
@@ -107,7 +109,7 @@ def create_blogpost():
             "blog_image": request.form.get("blog_image"),
             "blog_content": request.form.get("blog_content"),
             "created_by": session["username"],
-            "created_at": datetime.now().strftime('%H:%M')
+            "created_at": datetime.now().strftime('%B %d %Y')
         }
         mongo.db.blogpost.insert_one(blog)
         flash("New post created!")
@@ -136,7 +138,7 @@ def edit_post(blogpost_id):
 
 @app.route("/delete_post/<blogpost_id>")
 def delete_post(blogpost_id):
-    mongo.db.blogpost.remove({"_id": ObjectId(blogpost_id)})
+    mongo.db.blogpost.delete_one({"_id": ObjectId(blogpost_id)})
     flash("Post Deleted!")
     return redirect(url_for("blog_posts"))
 

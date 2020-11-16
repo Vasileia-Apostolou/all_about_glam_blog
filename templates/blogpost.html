@@ -1,24 +1,31 @@
 {% extends "base.html" %}
 {% block content %}
 
-<!-- SEARCH -->
-<div class="search-section">
-	<form action="{{ url_for('search') }}" method="post">
-		<div class="valign-wrapper center-align">
-			<div class="input-field col s6 offset-s6">
-				<i class="fas fa-search prefix search-icon"></i>
-				<input type="text" name="search" id="search" class="validate" required>
-				<label for="search">Search</label>
-			</div>
-			<div class="col s6 m4">
-				<button type="submit" class="btn-small search-button buttons hvr-glow hvr-grow">
-	                 Search <i class="fas fa-search prefix small-seach-icon"></i>
-	            </button>
-			</div>
-		</div>
-	</form>
-</div>
+<!-- ABOUT SECTION -->
+<div class="col l6 s12 about-section">
+	<h4 class="center-align about-section-title">About Us</h4>
+	<h6 class="center-align"><span id="about-section-name">All About Glam</span> is a blog about everything related to beauty.
+    Here is where all makeup and beauty lovers come to inspire or get inspired.
+	</h6>
 
+	<!-- SEARCH -->
+	<div class="search-section">
+			<form action="{{ url_for('search') }}" method="post" class="col 12">
+				<div class="row valign-wrapper center-align">
+					<div class="input-field col s12 m6">
+						<i class="fas fa-search prefix search-icon"></i>
+						<input type="text" name="search" id="search" class="validate" required>
+						<label for="search">Search</label>
+					</div>
+					<div class="col s12 m4">
+						<button type="submit" class="btn-small search-button hvr-glow hvr-grow">
+						            Search <i class="fas fa-search prefix small-seach-icon"></i>
+						</button>
+					</div>
+				</div>
+			</form>
+	</div>
+</div>
 
 <!-- Mobile Cards on Home Page -->
 {% if blogs|length > 0 %}
@@ -31,7 +38,7 @@
 				</div>
 				<div class="card-content">
 					<h2> {{ blogpost.blog_title }} </h2>
-					<p>created by {{ blogpost.created_by }} at {{ blogpost.created_at }}</p>
+					<p>created by {{ blogpost.created_by }} on {{ blogpost.created_at }}</p>
 				</div>
 				<div class="card-action">
 					<a href="{{ url_for('view_post', blogpost_id=blogpost._id) }}"
@@ -47,31 +54,6 @@
 		</div>
 	</div>
 </div>
-
-<!--<div class="card horizontal">
-	<div class="card-image">
-		<img class="img-input" src="{{ blogpost.blog_image }}">
-		</div>
-		<div class="card-stacked">
-			<div class="card-content">
-				<p> {{ blogpost.blog_title }} </p>
-				<p> {{ blogpost.blog_content }} </p>
-				<p>created by {{ blogpost.created_by }} at {{ blogpost.created_at }}</p>
-				<br>
-				<div class="col s3">
-					<a href="{{ url_for('view_post', blogpost_id=blogpost._id) }}"
-						class="btn-small buttons hvr-grow hvr-glow">View Post</a>
-					{% if session.username|lower == blogpost.created_by|lower %}
-
-					<button data-target="modal1" class="btn-small buttons home-page-buttons hvr-glow hvr-grow modal-trigger">Delete</button>
-					<a href="{{ url_for('edit_post', blogpost_id=blogpost._id) }}"
-						class="btn-small buttons home-page-buttons edit-button hvr-grow hvr-glow">Edit</a>
-
-					{% endif %}
-				</div>
-			</div>
-		</div>
-	</div>-->
 
 <!-- Desktop Cards on Home Page -->
 <div class="row ">
