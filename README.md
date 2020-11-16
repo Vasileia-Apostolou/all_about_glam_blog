@@ -3,7 +3,7 @@
 ## Table Of Content 
 
 - [**About**](#About)
-  - [**Why This Project?**](#Why-This-Project?)
+  - [**Why This Project**](#Why-This-Project)
 - [**UX**](#UX)
   - [**User Stories**](#User-Stories)
   - [**Research**](#Research)
@@ -40,18 +40,18 @@
 
 
 ## About
-This application is a blogpost and it was created for users to get inspired and share anything related to beauty. Users can create an account where they can add as many blogposts as they like for free! Plus they can update or edit their posts and profile account. 
+This application is a blog and was created for users to get inspired and share anything related to beauty. Users can create an account where they can add as many blog posts as they like for free!
 
 ## Why This Project?
-This application was created for my 3rd Project with Data Centric Development for [Code Institute](https://codeinstitute.net/). I used Python and a no-SQL database, MongoDB, to create this project which uses CRUD operations to allow users to create, read, update and delete their posts.
+This application was created for my 3rd Milestone Project with Data Centric Development for [Code Institute](https://codeinstitute.net/). I used Python and a no-SQL database, MongoDB, to create this project which uses CRUD operations to allow users to create, read, update and delete their posts.
 
 ## UX
 
 ### User Stories
 * As a user, I want to be able to create my own account.
 * As a user, I want to be able to log in and out of my account.
-* As a user, I want to be able to create a blog post.
 * As a user, I want to read inspiring posts from the web application.
+* As a user, I want to be able to create a blog post.
 * As a user, I want to be able to edit and update my blog posts.
 * As a user, I want to be able to delete my blog posts.
 * As a user, I want to be able to view my profile account.
@@ -65,37 +65,37 @@ To create this project's wireframes I used [Balsamiq](https://balsamiq.com/).
 During the development process some changes were made
 
 ### Design
-I wanted a pink color scheme for this project to give a girly and fun look. For the background I used a glittery fuchsia image and I kept the color of the navbar, footer and buttons the same color of light pink. All form have a white background with black text and icons. 
+I wanted a pink color scheme for this project to give a girly and fun look. For the background I used a glittery fuchsia image and I kept the color of the navbar, footer and buttons the same color of light pink. All forms have a white background with black text and icons. 
 
 ## Features
 
 ### Functionality
-The web application uses Python login to allow user to register or login to their account for free and in addition it offers CRUD operations which allows users to create, read, update and delete their posts or profile account.
+The web application uses Python login to allow user to register or login/logout to their account for free and in addition it offers CRUD operations which allows users to create, read, update and delete their posts.
 
 ### Existing Features
 - **Register** -
- Users can create their own account for free by filling the form and providing a username, email address and password which are required and stored in the database. The Form cannot be submitted if the username already exists but can create multiple accounts with the same email address. The users have to repeat their password to ensure there are no mistakes. The users passwords are hashed for security purposes.
+ Users can create their own account for free by filling the form and providing a username, email address and password which are required and stored in the database. The Form cannot be submitted if the username already exists but can create multiple accounts with the same email address. The users passwords are hashed for security purposes.
 
 - **Login** - 
 The login form has a username and password field which if correctly put in the users can login in their account.
 
 - **Logout** - 
-Users can logout of their account by clicking "Logout" in the navbar. 
+Users can logout from their account by clicking "Logout" in the navbar. 
 
 - **Users Profile** -
-Users who are logged in can visit their profile page and view their personal information. Users are also allowed to edit or delete their profile.
+Users who are registered and logged in can visit their profile page.
 
 - **Create Post** -
-Users can click on "Create Post" link in the navbar and will be directed to a form that has to be filled in with post title, image (optional), and content in order to create a new post. When the user clicks on the "Create Post" button, they will be redirected to the home page where they will be able to see their post.
+Users can click on "Create Post" link in the navbar and will be directed to a form that has to be filled in with post title, image (optional), and content in order to create a new post. When the user clicks on the "Create Post" button, they will be redirected to the home page where they will be able to see their new post.
 
 - **Edit Post** -
 If the users want to update their post, they can click on the "Edit" button which appears at the bottom of their post. Also when they click on the "View Post" button, the post will open in a seperate page where they will still have the option of updating their post. Once the "Edit" button is clicked, a form will display in a separate page with the title, image url and content already written as it is. Then changes in the inputs can be made and updated by clicking on the "Update" button. In case the users change their mind on updating their post, there is a "Cancel" button which will redirect them to the home page. Users can only edit their post and not others.
 
 - **Delete Post** -
-If the users want to delete their post, they can click on the "Delete" button which appears at the bottom of their post. Also when they click on the "View Post" button, the post will open in a seperate page where they will still have the option of deleting their post. Once the "delete" button is clicked, a pop-up will appear with the message "Are you sure you want to delete this post?". Then the user has the option of deleting the post by clicking the "Delete" button or cancel with the "Cancel" button. Users can only delete their post and not others.
+If the users want to delete their post, they can click on the "Delete" button which appears at the bottom of their post. Also when they click on the "View Post" button, the post will open in a seperate page where they will still have the option of deleting their post. Once the "delete" button is clicked, a pop-up will appear with the message "Are you sure you want to delete this post?". Then the user has the option of deleting the post by clicking the "Delete" button or cancel with the "Cancel" button which will exit the pop-up. Users can only delete their post and not others.
 
 - **View Post** -
-On the bottom left of every post there is a "View Post" button which opens the post in a seperate page and displays the full post when its clicked. The user who created that post has the option of editing or deleting the post.
+On the bottom left of every post there is a "View Post" button which opens the post in a seperate page and displays the full post alone. The user who created that post has the option of editing or deleting the post.
 
 - **Blog Post** - 
 Blog posts are displayed in the home page from olderst to newest.
@@ -111,7 +111,7 @@ Example : If the user searches the word "makeup" all posts that include "makeup"
 The footer includes a small "About" paragraph and social media links.
 
 - **Flash Messages** - 
-Based on the user interaction, flash messages are displayed at the top of the page rigth below the navbar. Flash messages let users know if their actions are successfully completed or failed.
+Based on the user interaction, flash messages are displayed at the top of the page right below the navbar. Flash messages let users know that their actions are successfully completed.
 
 
 ### Features Left To Implement 
@@ -141,6 +141,8 @@ JavaScript was used to create the main functional logic of this app.
 4. [Python](https://en.wikipedia.org/wiki/Python_programming_language)
 
 Python was used as the back-end programming language for this app.
+ 
+* [Jinja](https://jinja.palletsprojects.com/en/2.11.x/) is a modern and designer-friendly templating language for Python. I used Jinja to simplify my HTML code, avoid repetition, and allow simpler linking of the back-end to the front-end.
 
 ### Tools 
 1. [Git](https://git-scm.com/)
@@ -173,8 +175,6 @@ Chrome DevTools is a set of web developer tools built directly into the Google C
 
 2. [Flask](https://flask.palletsprojects.com/en/1.1.x/) is a micro web framework written in Python. 
 
-3. [Jinja](https://jinja.palletsprojects.com/en/2.11.x/) is a modern and designer-friendly templating language for Python. I used Jinja to simplify my HTML code, avoid repetition, and allow simpler linking of the back-end to the front-end.
-
 ### Database
 * [MongoDB](https://www.mongodb.com/) was used to store the database. The informatio displayed in the front-end app is pulled from the database store.
 
@@ -201,7 +201,7 @@ This web application was tested in the following browsers to ensure the web appl
  ### Testing User Stories
 - **As a user, I want to be able to create my own account.** 
  1. Click on the "Register" link in the navbar.
- 2. Fill in the Register Form with a username, email address, password and repeat password.
+ 2. Fill in the Register Form with a username, email address and password.
  3. Click on "Register" button.
  4. Flash message will appear saying "Account successfully created!"
 
@@ -217,16 +217,23 @@ This web application was tested in the following browsers to ensure the web appl
 
 - **As a user, I want to be able to create a blog post.** 
  1. Click on the "Create Post" link in the navbar.
- 2. Fill in the Form with a post title, image URL(optional)and content.
+ 2. Fill in the Form with a post title, image URL(optional) and content.
  3. Click on "Create Post" button.
- 4. Flash message will appear saying "New post created"
+ 4. Flash message will appear saying "New post created!"
 
 - **As a user, I want to read inspiring posts from the web application.** 
  1. Click on the "Home" link in the navbar or on the "All About Glam" navbar brand.
 
 - **As a user, I want to be able to edit and update my blog posts.** 
  1. Click on the "Edit" button displayed on the post you want to edit.
- 2. Update the Form with the post title, image URL(optional)and content.
+ 2. Update the Form with the post title, image URL(optional) and content.
+ 3. Click on "Update" button.
+ 4. Flash message will appear saying "Post updated!"
+
+ OR
+
+ 1. On the "View Post" page, click on the "Edit" button.
+ 2. Update the Form with the post title, image URL(optional) and content.
  3. Click on "Update" button.
  4. Flash message will appear saying "Post updated!"
  
@@ -246,29 +253,29 @@ OR
 
  ### Manual Testing
  * I tested the registration form by creating several fake user accounts with a username, email address, password and tested the "Register" button.
- * I logged in from several fake user account using the username and email address and tested the "Login" button.
+ * I logged in from several fake user accounts using the username and password and tested the "Login" button.
  * I tested the log out funtion from all accounts by clicking on the "Logout" button.
  * I created hundreds of new posts and I tested the form inputs and "Create Post" button.
  * I tested that all post created display in the "Home" page.
  * I tested the edit function by updating the title, image url and content of the post and tested the "Update" button.
  * I tested that the "Cancel" button takes user from the "Edit Post" page back to "Home".
  * I tested the Image URL input by copying image address from google images.
- * I tested the delete post funtion by clicking on the "Delete" button and tested defensive programming by also clicking on the "Delete" button which appears in a pop-up.
+ * I tested the delete post funtion by clicking on the "Delete" button and tested defensive programming by again clicking on the "Delete" button which appears in a pop-up.
  * I tested that the "Cancel" button exits the delete pop-up.
- * I tested that the view post button displays the post alone in a seperate page.
+ * I tested that the "View Post" button displays the post alone in a seperate page.
  * I tested the search bar by typing words that existing and words that don't exists in posts that I created. Also I tested that the "No Results Found" text appears when there are no results found.
  * I tested that all flash messages appear to the correct action with the correct message. 
- * I tested the navbar links to make sure that when the user is logged in the only navbar links that appear are "Home", "Profile", "Create Post" and "Logout", and when the user is logged out the only navbar links that appear are "Home", "Register" and "Login". 
- * I tested that the "Login" and "Register" anchor tags under the "Register" and "Login" form work correctly.
- * I tested the navbar responsiveness and it collapses to a hamburger menu and displays all navbar link correctly.
+ * I tested the navbar to make sure that when the user is logged in the only navbar links that appear are "Home", "Profile", "Create Post" and "Logout", and when the user is logged out the only navbar links that appear are "Home", "Register" and "Login". 
+ * I tested that the "Login" and "Register" anchor tags under the "Login" and "Register" forms work correctly.
+ * I tested the navbar responsiveness and it collapses to a hamburger menu and displays all navbar links correctly.
  * I tested that the "All About Glam" navbar brand redirects user to the Home page.
  * I tested all social media links in the footer.
 
 
 After many tests I confirm that all functionalities work and appear as intended on different screen sizes.
 
-
  ### Resolved Bugs
+
 
  ### Unresolved Bugs
 
@@ -276,8 +283,9 @@ After many tests I confirm that all functionalities work and appear as intended 
 The web application's HTML and CSS code has been tested in [W3C Validator](https://validator.w3.org/). The JavaScript code has been tested in [JS Hint](https://jshint.com/). Python syntax has been tested in [Pep8 Online Tool](http://pep8online.com/) and responsiveness was tested in [Resposinator](https://www.responsinator.com/), [Am I Responsive](http://ami.responsivedesign.is/) and [Mobile-Friendly Test](https://search.google.com/test/mobile-friendly).
 
 ## Deployment 
-* [Live App Link](https://all-about-glam-blog.herokuapp.com/)
-* [Repository Link](https://github.com/Vasileia-Apostolou/all_about_glam_blog)
+
+#### [Live App Link](https://all-about-glam-blog.herokuapp.com/)
+#### [Repository Link](https://github.com/Vasileia-Apostolou/all_about_glam_blog)
 
 I used GitHub for my version control and Heroku to host the live version of my project. To deploy my website to Heroku, I used the following steps:
 
@@ -331,20 +339,20 @@ To run my code locally, users can download a local copy of my code to their desk
 ## Credits 
 
 ### Content
-* Modal Structure HTML and JavaScript code was taken from [Materialize](https://materializecss.com/modals.html).
+* Modal Structure HTML and JavaScript code was taken from [Materialize Modals](https://materializecss.com/modals.html).
 * Forms Structure was taken from [Materialize Forms](https://materializecss.com/text-inputs.html).
 * NavBar HTML and JavaScript code was taken from [Materialize NavBar](https://materializecss.com/navbar.html).
 
 
 ### Media 
-* Background Image was taken from [Google] Images.
+* Background Image was taken from [Google Images](https://www.google.dk/imghp?hl=en&tab=wi&authuser=0&ogbl) .
 
 ### Acknowledgements
-* Overall project and README.md file was inspired by [this](https://github.com/hebs87/cookbook-milestone-project-three) project.
-* Most of the functionality implement in my app are things I learned from [Code Institute's](https://codeinstitute.net/) task manager mini project.
+* Overall project and README file was inspired by [this](https://github.com/hebs87/cookbook-milestone-project-three) project.
+* Most of the functionality implemented in my app are things I learned from [Code Institute's](https://codeinstitute.net/) task manager mini project.
 * I got help on fixing errors and hints on how to solve problems from [Stack Overflow](https://stackoverflow.com/) and [Slack](https://slack.com/intl/en-dk/).
 
 ### Disclaimer
 This project is for educational purposes only.
 
-[Back to the top ↑](#all-about-glam-blog)
+[Back to the top ↑](#All-About-Glam)
