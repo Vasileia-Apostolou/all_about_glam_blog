@@ -62,6 +62,9 @@ I researched tutorials with Python and MongoDB on Youtube and Udemy, to understa
 ### Wireframes
 To create this project's wireframes I used [Balsamiq](https://balsamiq.com/).
 
+* When user is logged in
+   * [Home]()
+
 During the development process some changes were made
 
 ### Design
