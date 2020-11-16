@@ -1,32 +1,33 @@
 {% extends "base.html" %}
 {% block content %}
 
+<!-- LOGIN FORM -->
 <div class="row">
 	<form class="col s12 m8 offset-m2" method="POST" action="{{ url_for('login') }}">
-    <h4 class="center-align page-title">Login</h4>
+		<h4 class="center-align page-title">Login</h4>
 		<div class="card-panel">
 			<div class="row">
 				<div class="input-field col s12">
-				    <i class="far fa-user prefix"></i>
-                    <input id="username" name="username" type="text" class="validate">
+					<i class="far fa-user prefix"></i>
+					<input id="username" name="username" type="text" class="validate">
 					<label for="username">Username</label>
 				</div>
-            </div>
-			<div class="row">
-					<div class="input-field col s12">
-                        <i class="far fa-eye prefix"></i>
-						<input id="password" name="password" type="password" minlength="8" maxlength="20" class="validate" required>
-						<label for="password">Password</label>
-					</div>
 			</div>
-                <div class="row">
-                   <button type="submit" class="col s12 m4 offset-m4 buttons btn hvr-grow hvr-glow">Log In <i class="fas fa-sign-in-alt"></i></button>
-                </div>
-            <div>
-              <small class="center-align col s12 m6 offset-m3">  
+			<div class="row">
+				<div class="input-field col s12">
+					<i class="far fa-eye prefix"></i>
+					<input id="password" name="password" type="password" minlength="8" maxlength="20" class="validate" required>
+					<label for="password">Password</label>
+				</div>
+			</div>
+			<div class="row">
+				<button type="submit" class="col s12 m4 offset-m4 buttons btn hvr-grow hvr-glow">Log In <i class="fas fa-sign-in-alt"></i></button>
+			</div>
+			<div>
+				<small class="center-align col s12 m6 offset-m3">
                  Want to create an account? <a href="{{ url_for('register') }}">Register Now!</a>
               </small>
-            </div>
+			</div>
 		</div>
 	</form>
 </div>

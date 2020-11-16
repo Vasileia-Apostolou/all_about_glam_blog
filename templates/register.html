@@ -1,46 +1,40 @@
 {% extends "base.html" %}
 {% block content %}
- 
+
+<!-- REGISTERATION FORM -->
 <div class="row">
 	<form class="col s12 m8 offset-m2" method="POST" action="{{ url_for('register') }}">
-    <h4 class="center-align page-title">Register</h4>
+		<h4 class="center-align page-title">Register</h4>
 		<div class="card-panel">
 			<div class="row">
 				<div class="input-field col s12">
-				    <i class="far fa-user prefix"></i>
-                    <input id="username" name="username" type="text" class="validate">
+					<i class="far fa-user prefix"></i>
+					<input id="username" name="username" type="text" class="validate">
 					<label for="username">Username</label>
 				</div>
-            </div>
-            <div class="row">
+			</div>
+			<div class="row">
 				<div class="input-field col s12">
-				    <i class="far fa-envelope prefix"></i>
-                    <input id="email_address" name="email_address" type="email" class="validate" required>
+					<i class="far fa-envelope prefix"></i>
+					<input id="email_address" name="email_address" type="email" class="validate" required>
 					<label for="email_address">Email Address</label>
 				</div>
-            </div>
-			<div class="row">
-					<div class="input-field col s12">
-                        <i class="far fa-eye prefix"></i>
-						<input id="password" name="password" type="password" minlength="8" maxlength="20" class="validate" required>
-						<label for="password">Password</label>
-					</div>
 			</div>
-            <div class="row">
+			<div class="row">
 				<div class="input-field col s12">
-				    <i class="far fa-eye prefix"></i>
-                    <input id="password" name="password" type="password" minlength="8" maxlength="20" class="validate" required>
-					<label for="password">Repeat Password</label>
+					<i class="far fa-eye prefix"></i>
+					<input id="password" name="password" type="password" minlength="8" maxlength="20" class="validate" required>
+					<label for="password">Password</label>
 				</div>
-            </div>
-                <div class="row">
-                   <button type="submit" class="col s12 m4 offset-m4 buttons btn hvr-grow hvr-glow">Register <i class="fas fa-sign-in-alt"></i></button>
-                </div>
-            <div>
-              <small class="center-align col s12 m4 offset-m4">  
+			</div>
+			<div class="row">
+				<button type="submit" class="col s12 m4 offset-m4 buttons btn hvr-grow hvr-glow">Register <i class="fas fa-sign-in-alt"></i></button>
+			</div>
+			<div>
+				<small class="center-align col s12 m4 offset-m4">
                 Already Registered? <a href="{{ url_for('login') }}"> Log In</a>
               </small>
-            </div>
+			</div>
 		</div>
 	</form>
 </div>

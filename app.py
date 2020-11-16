@@ -141,33 +141,11 @@ def delete_post(blogpost_id):
     return redirect(url_for("blog_posts"))
 
 
-@app.route("/edit_profile/<users_id>", methods=["GET", "POST"])
-def edit_profile(users_id):
-    if request.method == "POST":
-        users = {
-            "username": request.form.get("username"),
-            "email_address": request.form.get("email_address"),
-            "password": request.form.get("password")
-        }
-        mongo.db.users.update({"_id": ObjectId(users_id)}, users)
-        flash("Profile Updated!")
-        return redirect(url_for("users"))
-
-    users = mongo.db.users.find_one({"_id": ObjectId(users_id)})
-    return render_template("edit_profile.html", users=users)
-
-
-@app.route("/delete_profile/<users_id>")
-def delete_profile(users_id):
-    mongo.db.users.remove({"_id": ObjectId(users_id)})
-    flash("Profile Deleted!")
-    return redirect(url_for("blog_posts"))
-
-
 @app.route("/view_post/<blogpost_id>")
 def view_post(blogpost_id):
     blogpost = mongo.db.blogpost.find_one({"_id": ObjectId(blogpost_id)})
     return render_template("view_post.html", blogpost=blogpost)
+
 
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),

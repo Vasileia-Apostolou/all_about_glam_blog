@@ -1,74 +1,68 @@
 {% extends "base.html" %}
 {% block content %}
 
-	<!-- SEARCH -->
-	<div class="search-section">
-		<form action="{{ url_for('search') }}" method="post">
-			<div class="valign-wrapper center-align">
-				<div class="input-field col s6 offset-s6">
-					<i class="fas fa-search prefix search-icon"></i>
-					<input type="text" name="search" id="search" class="validate" required>
-					<label for="search">Search</label>
-				</div>
-				<div class="col s6 m4">
-					<button type="submit" class="btn-small search-button buttons hvr-glow hvr-grow">
+<!-- SEARCH -->
+<div class="search-section">
+	<form action="{{ url_for('search') }}" method="post">
+		<div class="valign-wrapper center-align">
+			<div class="input-field col s6 offset-s6">
+				<i class="fas fa-search prefix search-icon"></i>
+				<input type="text" name="search" id="search" class="validate" required>
+				<label for="search">Search</label>
+			</div>
+			<div class="col s6 m4">
+				<button type="submit" class="btn-small search-button buttons hvr-glow hvr-grow">
 	                 Search <i class="fas fa-search prefix small-seach-icon"></i>
 	            </button>
-				</div>
 			</div>
-		</form>
-	</div>
-	<!-- SEARCH -->
-  
-    <!-- HOME PAGE -->
-	{% if blogs|length > 0 %}
-	   {% for blogpost in blogs %}
-	<div class="card horizontal">
-		<div class="card-image">
-			<img class="img-input" src="{{ blogpost.blog_image }}">
 		</div>
-			<div class="card-stacked">
-				<div class="card-content">
-					<p> {{ blogpost.blog_title }} </p>
-					<p> {{ blogpost.blog_content }} </p>
-					<p>created by {{ blogpost.created_by }} at {{ blogpost.created_at }}</p>
-					<br>
-					<div class="col s3">
-                        <a href="{{ url_for('view_post', blogpost_id=blogpost._id) }}"
-				            class="btn-small buttons hvr-grow hvr-glow">View Post</a>
-						{% if session.username|lower == blogpost.created_by|lower %}
-                    
-						<button data-target="modal1" class="btn-small buttons hvr-glow hvr-grow modal-trigger">Delete</button>
-                        <a href="{{ url_for('edit_post', blogpost_id=blogpost._id) }}"
-							class="btn-small buttons post-buttons hvr-grow hvr-glow">Edit</a>
-                    
-						{% endif %}
-					</div>
-				</div>
-			</div>
-	</div>
-    <!-- HOME PAGE -->
-    
-   <!-- MODAL -->
-	<div id="modal1" class="modal">
-		<div class="modal-content">
-			<h3>Delete Post</h3>
-			<p>Are you sure you want to delete this post?</p>
-		</div>
-		<div class="modal-footer">
-			<button class="btn-small buttons modal-close hvr-glow hvr-grow">Cancel</button>
-			<a href="{{ url_for('delete_post', blogpost_id=blogpost._id) }}"
-				class="btn-small buttons post-buttons hvr-grow hvr-glow">Delete</a>
-		</div>
-	</div>
-    <!-- MODAL -->
+	</form>
+</div>
 
-    {% endfor %}
-    {% else %}
-       <h4 class="center-align no-results">No Results Found</h4>
-    {% endif %}
-   
+<!-- HOME PAGE -->
+{% if blogs|length > 0 %}
+{% for blogpost in blogs %}
+<div class="card horizontal">
+	<div class="card-image">
+		<img class="img-input" src="{{ blogpost.blog_image }}">
+		</div>
+		<div class="card-stacked">
+			<div class="card-content">
+				<p> {{ blogpost.blog_title }} </p>
+				<p> {{ blogpost.blog_content }} </p>
+				<p>created by {{ blogpost.created_by }} at {{ blogpost.created_at }}</p>
+				<br>
+				<div class="col s3">
+					<a href="{{ url_for('view_post', blogpost_id=blogpost._id) }}"
+						class="btn-small buttons hvr-grow hvr-glow">View Post</a>
+					{% if session.username|lower == blogpost.created_by|lower %}
+
+					<button data-target="modal1" class="btn-small buttons home-page-buttons hvr-glow hvr-grow modal-trigger">Delete</button>
+					<a href="{{ url_for('edit_post', blogpost_id=blogpost._id) }}"
+						class="btn-small buttons home-page-buttons edit-button hvr-grow hvr-glow">Edit</a>
+
+					{% endif %}
+				</div>
+			</div>
+		</div>
+	</div>
+
+<!-- MODAL -->
+<div id="modal1" class="modal">
+	<div class="modal-content">
+		<h3>Delete Post</h3>
+		<p>Are you sure you want to delete this post?</p>
+	</div>
+	<div class="modal-footer">
+		<button class="btn-small pop-up-buttons modal-close hvr-glow hvr-grow">Cancel</button>
+		<a href="{{ url_for('delete_post', blogpost_id=blogpost._id) }}"
+		class="btn-small pop-up-buttons hvr-grow hvr-glow">Delete</a>
+	</div>
+</div>
+
+{% endfor %}
+{% else %}
+<h4 class="center-align no-results">No Results Found</h4>
+{% endif %}
 
 {% endblock %}
-
-

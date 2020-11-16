@@ -286,6 +286,7 @@ OR
  * I tested that the "All About Glam" navbar brand redirects user to the Home page.
  * I tested all social media links in the footer.
 
+App link was also shared with friends and family for further use and testing.
 
 After many tests I confirm that all functionalities work and appear as intended on different screen sizes.
 
@@ -364,7 +365,7 @@ To run my code locally, users can download a local copy of my code to their desk
 
 ### Acknowledgements
 * Overall project and README file was inspired by [this](https://github.com/hebs87/cookbook-milestone-project-three) project.
-* Most of the functionality implemented in my app are things I learned from [Code Institute's](https://codeinstitute.net/) task manager mini project.
+* Most of this project's user authentication functionality was taken from [Code Institute's](https://codeinstitute.net/) task manager mini project.
 * I got help on fixing errors and hints on how to solve problems from [Stack Overflow](https://stackoverflow.com/) and [Slack](https://slack.com/intl/en-dk/).
 
 ### Disclaimer
