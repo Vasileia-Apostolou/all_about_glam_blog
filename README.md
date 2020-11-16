@@ -24,6 +24,7 @@
   - [**Browsers**](#Browsers)
   - [**Devices**](#Devices)
   - [**Testing User Stories**](#Testing-User-Stories)
+  - [**Manual Testing**](#Manual-Testing)
   - [**Resolved Bugs**](#Resolved-Bugs)
   - [**Unresolved Bugs**](#Unresolved-Bugs)
   - [**Code Validation**](#Code-Validation)
@@ -52,9 +53,8 @@ This application was created for my 3rd Project with Data Centric Development fo
 * As a user, I want to be able to create a blog post.
 * As a user, I want to read inspiring posts from the web application.
 * As a user, I want to be able to edit and update my blog posts.
-* As a user, I want to be able to edit my profile account.
 * As a user, I want to be able to delete my blog posts.
-* As a user, I want to be able to my profile account.
+* As a user, I want to be able to view my profile account.
 
 ### Research
 I researched tutorials with Python and MongoDB on Youtube and Udemy, to understand more how to create a CRUD application and I could get a clear idea of what functionality and design I wanted my web application to have, however most of this project's user authentication functionality was taken from [Code Institute's](https://codeinstitute.net/) task manager mini project.
@@ -199,13 +199,13 @@ This web application was tested in the following browsers to ensure the web appl
  * MacBook Pro
 
  ### Testing User Stories
-- **As a user, I want to be able to create my own account.** -
+- **As a user, I want to be able to create my own account.** 
  1. Click on the "Register" link in the navbar.
  2. Fill in the Register Form with a username, email address, password and repeat password.
  3. Click on "Register" button.
  4. Flash message will appear saying "Account successfully created!"
 
-- **As a user, I want to be able to log in and out of my account.** -
+- **As a user, I want to be able to log in and out of my account.** 
   * LOGIN 
   1. Click on the "Login" link in the navbar.
   2. Fill in the Login Form with your username and password.
@@ -215,19 +215,57 @@ This web application was tested in the following browsers to ensure the web appl
   1. Click on the "Logout" link in the navbar.
   2. Flash message will appear saying "You have been logged out!"
 
-- **As a user, I want to be able to create a blog post.** -
+- **As a user, I want to be able to create a blog post.** 
  1. Click on the "Create Post" link in the navbar.
  2. Fill in the Form with a post title, image URL(optional)and content.
  3. Click on "Create Post" button.
  4. Flash message will appear saying "New post created"
 
-- **As a user, I want to read inspiring posts from the web application.** -
- 1. Click on the "Home" link in the navbar 
+- **As a user, I want to read inspiring posts from the web application.** 
+ 1. Click on the "Home" link in the navbar or on the "All About Glam" navbar brand.
 
-* As a user, I want to be able to edit and update my blog posts.
-* As a user, I want to be able to edit my profile account.
-* As a user, I want to be able to delete my blog posts.
-* As a user, I want to be able to my profile account.
+- **As a user, I want to be able to edit and update my blog posts.** 
+ 1. Click on the "Edit" button displayed on the post you want to edit.
+ 2. Update the Form with the post title, image URL(optional)and content.
+ 3. Click on "Update" button.
+ 4. Flash message will appear saying "Post updated!"
+ 
+- **As a user, I want to be able to delete my blog posts.**
+ 1. Click on the "Delete" button displayed on the post you want to delete.
+ 2. Click on the "Delete" button on the pop up.
+ 3. Flash message will appear saying "Post deleted!"
+
+OR
+
+ 1. On the "View Post" page, click on the "Delete" button.
+ 2. Click on the "Delete" button on the pop up.
+ 3. Flash message will appear saying "Post deleted!"
+
+- **As a user, I want to be able to view my profile account.**
+  1. Click on the "Profile" link in the navbar.
+
+ ### Manual Testing
+ * I tested the registration form by creating several fake user accounts with a username, email address, password and tested the "Register" button.
+ * I logged in from several fake user account using the username and email address and tested the "Login" button.
+ * I tested the log out funtion from all accounts by clicking on the "Logout" button.
+ * I created hundreds of new posts and I tested the form inputs and "Create Post" button.
+ * I tested that all post created display in the "Home" page.
+ * I tested the edit function by updating the title, image url and content of the post and tested the "Update" button.
+ * I tested that the "Cancel" button takes user from the "Edit Post" page back to "Home".
+ * I tested the Image URL input by copying image address from google images.
+ * I tested the delete post funtion by clicking on the "Delete" button and tested defensive programming by also clicking on the "Delete" button which appears in a pop-up.
+ * I tested that the "Cancel" button exits the delete pop-up.
+ * I tested that the view post button displays the post alone in a seperate page.
+ * I tested the search bar by typing words that existing and words that don't exists in posts that I created. Also I tested that the "No Results Found" text appears when there are no results found.
+ * I tested that all flash messages appear to the correct action with the correct message. 
+ * I tested the navbar links to make sure that when the user is logged in the only navbar links that appear are "Home", "Profile", "Create Post" and "Logout", and when the user is logged out the only navbar links that appear are "Home", "Register" and "Login". 
+ * I tested that the "Login" and "Register" anchor tags under the "Register" and "Login" form work correctly.
+ * I tested the navbar responsiveness and it collapses to a hamburger menu and displays all navbar link correctly.
+ * I tested that the "All About Glam" navbar brand redirects user to the Home page.
+ * I tested all social media links in the footer.
+
+
+After many tests I confirm that all functionalities work and appear as intended on different screen sizes.
 
 
  ### Resolved Bugs
