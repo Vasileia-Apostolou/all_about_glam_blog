@@ -155,27 +155,72 @@ Chrome DevTools is a set of web developer tools built directly into the Google C
 4. [PyMongo](https://pymongo.readthedocs.io/en/stable/) was used as the Python API for MongoDB. This API enables linking the data from the back-end database to the front-end app.
 
 ### Frameworks 
-1. [jQuery](https://jquery.com/)
+1. [jQuery](https://jquery.com/) is a fast, small, and feature-rich JavaScript library. It was used in this project to simplify the DOM.
 
-jQuery is a fast, small, and feature-rich JavaScript library. It was used in this project to simplify the DOM.
-
-2. [Flask](https://flask.palletsprojects.com/en/1.1.x/)
-
-Flask is a micro web framework written in Python. 
+2. [Flask](https://flask.palletsprojects.com/en/1.1.x/) is a micro web framework written in Python. 
 
 3. [Jinja](https://jinja.palletsprojects.com/en/2.11.x/) is a modern and designer-friendly templating language for Python. I used Jinja to simplify my HTML code, avoid repetition, and allow simpler linking of the back-end to the front-end.
 
 ### Database
-[MongoDB](https://www.mongodb.com/) was used to store the database. The informatio displayed in the front-end app is pulled from the database store.
+* [MongoDB](https://www.mongodb.com/) was used to store the database. The informatio displayed in the front-end app is pulled from the database store.
 
 ### Hosting 
-* [Heroku](https://www.heroku.com/)
-
-Heroku was used as the hosting platform to deploy this app.
+* [Heroku](https://www.heroku.com/) was used as the hosting platform to deploy this app.
 
 ## Testing
 
 ## Deployment 
+* [Live App Link](https://all-about-glam-blog.herokuapp.com/)
+* [Repository Link](https://github.com/Vasileia-Apostolou/all_about_glam_blog)
+
+I used GitHub for my version control and Heroku to host the live version of my project. To deploy my website to Heroku, I used the following steps:
+
+1. Created the app in Heroku.
+2. Ran the `sudo snap install --classic heroku` command in the terminal window to install heroku in my local workspace.
+3. Ran the `heroku login --interactive` command in the terminal window and entered my credentials to login to Heroku.
+4. Added and committed the files to Git using the `git add .` and `git commit -m ""` commands in the terminal window.
+5. Linked the Heroku app as the remote master branch using the following command in the terminal window:
+
+    ```heroku git:remote -a <app-name>```
+
+6. Created a requirements.txt file using the following command in the terminal window:
+
+    ```sudo pip3 freeze --local > requirements.txt```
+
+7. Created a Procfile using the following command in the terminal window:
+
+    ```echo web: python <fileName.py> > Procfile```
+
+8. Ran the `git push heroku master` command in the terminal window to push the app to Heroku.
+9. Ran the `heroku: ps:scale web=1` command in the terminal window to run the app in Heroku.
+10. Entered the following Config Var in Heroku:
+
+    ```MONGO_URI : <link to MongoDB>```
+
+I didn't need to upload the IP and PORT Config Vars in Heroku, as these were already present in my `app.py` file.
+
+The app was successfully deployed to Heroku at this stage.
+
+### Running Code Locally 
+To run my code locally, users can download a local copy of my code to their desktop by completing the following steps:
+
+1. Go to [my GitHub repository](https://github.com/Vasileia-Apostolou/all_about_glam_blog)
+2. Click on 'Clone or download' under the repository name.
+3. Copy the clone URL for the repository in the 'Clone with HTTPs section'.
+4. Open 'Git Bash' in your local IDE.
+5. Change the current working directory to the location where you want the cloned directory to be made.
+6. Type `git clone`, then paste the URL you copied in Step 3:
+
+    ```git clone https://github.com/USERNAME/REPOSITORY```
+
+7. Press `Enter` to complete the process and create your local clone.
+8. Create collections named *_blog_*, *_blogpost_* and *_users_*.
+9. Navigate to the `.bashrc` terminal and add your MongoDB URI in the following format:
+
+    ```MONGO_URI="insert your mongo uri details here"```
+
+10. In the terminal, run the `pip3 install -r requirements.txt` command to install the requirements.txt file.
+11. You should now be able to run the app locally using the `python3 run.py` command.
 
 ## Credits 
 
