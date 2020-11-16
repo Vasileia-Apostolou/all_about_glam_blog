@@ -63,9 +63,21 @@ I researched tutorials with Python and MongoDB on Youtube and Udemy, to understa
 To create this project's wireframes I used [Balsamiq](https://balsamiq.com/).
 
 * When user is logged in
-   * [Home]()
+   * [Home](https://github.com/Vasileia-Apostolou/all_about_glam_blog/blob/master/wireframes/Home.pdf)
+   * [Search](https://github.com/Vasileia-Apostolou/all_about_glam_blog/blob/master/wireframes/Search.pdf)
+   * [Users Profile](https://github.com/Vasileia-Apostolou/all_about_glam_blog/blob/master/wireframes/Profile.pdf)
+   * [Create New Post](https://github.com/Vasileia-Apostolou/all_about_glam_blog/blob/master/wireframes/Create_New_Post.pdf)
+   * [Edit Post](https://github.com/Vasileia-Apostolou/all_about_glam_blog/blob/master/wireframes/Edit_Post.pdf)
+   * [Delete Post](https://github.com/Vasileia-Apostolou/all_about_glam_blog/blob/master/wireframes/Delete.pdf)
+   * [View Post](https://github.com/Vasileia-Apostolou/all_about_glam_blog/blob/master/wireframes/View_Post.pdf)
 
-During the development process some changes were made
+* When user is logged out 
+   * [Home](https://github.com/Vasileia-Apostolou/all_about_glam_blog/blob/master/wireframes/Home.pdf)
+   * [Search](https://github.com/Vasileia-Apostolou/all_about_glam_blog/blob/master/wireframes/Search.pdf)
+   * [Register](https://github.com/Vasileia-Apostolou/all_about_glam_blog/blob/master/wireframes/Register.pdf)
+   * [Login](https://github.com/Vasileia-Apostolou/all_about_glam_blog/blob/master/wireframes/Login.pdf)
+
+During the development process some changes were made.
 
 ### Design
 I wanted a pink color scheme for this project to give a girly and fun look. For the background I used a glittery fuchsia image and I kept the color of the navbar, footer and buttons the same color of light pink. All forms have a white background with black text and icons. 
