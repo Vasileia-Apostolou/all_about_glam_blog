@@ -1,4 +1,4 @@
-# [All About Glam]() - Milestone Project : Data Centric Development - Code Institute 
+# [All About Glam](https://all-about-glam-blog.herokuapp.com/) - Milestone Project : Data Centric Development - Code Institute 
 
 ## Table Of Content 
 
@@ -27,6 +27,9 @@
   - [**Unresolved Bugs**](#Unresolved-Bugs)
   - [**Code Validation**](#Code-Validation)
 - [**Deployment**](#Deployment)
+  - [**Live Link App**](#Live-Link-App)
+  - [**Repository Link**](#Repository-Link)
+  - [**Running Code Locally**](#Running-Code-Locally)
 - [**Credits**](#Credits)
   - [**Content**](#Content)
   - [**Acknowledgements**](#Acknowledgements)
@@ -204,7 +207,7 @@ The app was successfully deployed to Heroku at this stage.
 ### Running Code Locally 
 To run my code locally, users can download a local copy of my code to their desktop by completing the following steps:
 
-1. Go to [my GitHub repository](https://github.com/Vasileia-Apostolou/all_about_glam_blog)
+1. Go to [my GitHub repository](https://github.com/Vasileia-Apostolou/all_about_glam_blog).
 2. Click on 'Clone or download' under the repository name.
 3. Copy the clone URL for the repository in the 'Clone with HTTPs section'.
 4. Open 'Git Bash' in your local IDE.
@@ -220,13 +223,20 @@ To run my code locally, users can download a local copy of my code to their desk
     ```MONGO_URI="insert your mongo uri details here"```
 
 10. In the terminal, run the `pip3 install -r requirements.txt` command to install the requirements.txt file.
-11. You should now be able to run the app locally using the `python3 run.py` command.
+11. You should now be able to run the app locally using the `python3 app.py` command.
 
 ## Credits 
+* README.md file was inspired by [this](https://github.com/hebs87/cookbook-milestone-project-three/blob/master/README.md) README file.
 
 ### Media 
+* Background Image was taken from [Google] Images.
 
 ### Acknowledgements
+* Overall project and README.md file was inspired by [this](https://github.com/hebs87/cookbook-milestone-project-three) project.
+* Most of the functionality implement in my app are things I learned from [Code Institute's](https://codeinstitute.net/) task manager mini project.
+* I got help on fixing errors and hints on how to solve problems from [Stack Overflow](https://stackoverflow.com/) and [Slack](https://slack.com/intl/en-dk/).
 
 ### Disclaimer
 This project is for educational purposes only.
+
+[Back to the top ↑](#All-About-Glam)
