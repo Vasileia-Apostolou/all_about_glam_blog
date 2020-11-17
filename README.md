@@ -113,7 +113,7 @@ If the users want to delete their post, they can click on the "Delete" button wh
 On the bottom left of every post there is a "View Post" button which opens the post in a seperate page and displays the full post alone. The user who created that post has the option of editing or deleting the post.
 
 - **Blog Post** - 
-Blog posts are displayed in the home page from olderst to newest.
+Blog posts are displayed in the home page from newest to oldest.
 
 - **NavBar** -
 The navbar link vary depending on whether the user is logged in or not. If the user is logged in, the navbar will have Home, Profile, Create Post and Logout links. If the user is logged out, the navbar will have Home, Register and Login links. The navbar collapses to a hamburger menu when viewed in smaller screen sizes.
@@ -288,15 +288,11 @@ OR
  * I tested the navbar responsiveness and it collapses to a hamburger menu and displays all navbar links correctly.
  * I tested that the "All About Glam" navbar brand redirects user to the Home page.
  * I tested all social media links in the footer.
+ * I tested what happens if the user closes the tab and reopens it. The user will remain logged in.
 
 App link was also shared with friends and family for further use and testing.
 
 After many tests I confirm that all functionalities work and appear as intended on different screen sizes.
-
- ### Resolved Bugs
-
-
- ### Unresolved Bugs
 
 ### Code Validation
 The web application's HTML and CSS code has been tested in [W3C Validator](https://validator.w3.org/). The JavaScript code has been tested in [JS Hint](https://jshint.com/). Python syntax has been tested in [Pep8 Online Tool](http://pep8online.com/) and responsiveness was tested in [Resposinator](https://www.responsinator.com/), [Am I Responsive](http://ami.responsivedesign.is/) and [Mobile-Friendly Test](https://search.google.com/test/mobile-friendly).
@@ -374,4 +370,4 @@ To run my code locally, users can download a local copy of my code to their desk
 ### Disclaimer
 This project is for educational purposes only.
 
-[Back to the top ↑](#all_about_glam_blog)
+[Back to the top ↑](#all-about-glam-blog)

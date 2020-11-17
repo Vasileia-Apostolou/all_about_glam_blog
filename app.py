@@ -78,6 +78,9 @@ def register():
 
 @app.route("/login", methods=["GET", "POST"])
 def login():
+    if session["username"]:
+        return redirect(url_for("blog_posts"))
+
     ''' Check that the user exists and the password matches
         the hashed password in the database
     '''
@@ -152,6 +155,8 @@ def create_blogpost():
 
 @app.route("/edit_post/<blogpost_id>", methods=["GET", "POST"])
 def edit_post(blogpost_id):
+    if session["username"]:
+        return redirect(url_for("blog_posts"))
     '''
     Update existing database with new form values
     '''
