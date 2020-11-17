@@ -29,7 +29,7 @@
 
 <!-- Mobile Cards on Home Page -->
 {% if blogs|length > 0 %}
-{% for blogpost in blogs %}
+{% for blogpost in blogs|reverse %}
 <div class="row ">
 	<div class="col s12 ">
 		<div class="hide-on-med-and-up">
@@ -57,7 +57,7 @@
 </div>
 
 <!-- Desktop Cards on Home Page -->
-<div class="row ">
+<div class="row">
 	<div class="col m12 l12">
 		<div class="hide-on-small-only">
 			<div class="card horizontal">

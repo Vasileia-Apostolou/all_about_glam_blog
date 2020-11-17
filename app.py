@@ -21,9 +21,12 @@ app.secret_key = os.environ.get("SECRET_KEY")
 mongo = PyMongo(app)
 
 
+# READ OPERATION
+
 @app.route("/")
 @app.route("/blog_posts")
 def blog_posts():
+    # Display all blog collections from the database
     blogs = list(mongo.db.blogpost.find())
     return render_template("blogpost.html", blogs=blogs)
 
@@ -32,6 +35,7 @@ def blog_posts():
 
 @app.route("/search", methods=["GET", "POST"])
 def search():
+    # Check if text exists in the database
     search = request.form.get("search")
     blogs = list(mongo.db.blogpost.find({"$text": {"$search": search}}))
     return render_template("blogpost.html", blogs=blogs)

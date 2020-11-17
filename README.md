@@ -29,7 +29,7 @@
   - [**Unresolved Bugs**](#Unresolved-Bugs)
   - [**Code Validation**](#Code-Validation)
 - [**Deployment**](#Deployment)
-  - [**Live Link App**](#Live-Link-App)
+  - [**Live App Link**](#Live-App-Link)
   - [**Repository Link**](#Repository-Link)
   - [**Running Code Locally**](#Running-Code-Locally)
 - [**Credits**](#Credits)
@@ -136,6 +136,9 @@ In the future, I would like the Users Profile to display all their information, 
 
 - **Share**-
 In the future, I would like to add a feature which allows the users to share their post which others on social media.
+
+-**Pagination**-
+In the future, I would like to add pagination in my app to break the content into seperate pages for a more user-friendly experience.
 
 
 ## Technologies Used 
@@ -300,7 +303,7 @@ The web application's HTML and CSS code has been tested in [W3C Validator](https
 
 ## Deployment 
 
-#### [Live App Link](https://all-about-glam-blog.herokuapp.com/)
+####  [Live App Link](https://all-about-glam-blog.herokuapp.com/)
 #### [Repository Link](https://github.com/Vasileia-Apostolou/all_about_glam_blog)
 
 I used GitHub for my version control and Heroku to host the live version of my project. To deploy my website to Heroku, I used the following steps:
@@ -371,4 +374,4 @@ To run my code locally, users can download a local copy of my code to their desk
 ### Disclaimer
 This project is for educational purposes only.
 
-[Back to the top ↑](#All_About_Glam)
+[Back to the top ↑](#all_about_glam_blog)
