@@ -18,7 +18,7 @@
 						<label for="search">Search</label>
 					</div>
 					<div class="col s12 m4">
-						<button type="submit" class="btn-small search-button hvr-glow hvr-grow">
+						<button type="submit" class="btn search-button hvr-glow hvr-grow">
 						            Search <i class="fas fa-search prefix small-seach-icon"></i>
 						</button>
 					</div>
@@ -45,9 +45,9 @@
 						class="btn-small buttons hvr-grow hvr-glow">View Post</a>
 					{% if session.username|lower == blogpost.created_by|lower %}
 
-					<button data-target="modal1" class="btn-small buttons home-page-buttons hvr-glow hvr-grow modal-trigger">Delete</button>
+					<button data-target="modal1" class="btn-small buttons home-page-buttons hvr-glow hvr-grow modal-trigger">Delete <i class="far fa-trash-alt prefix"></i></button>
 					<a href="{{ url_for('edit_post', blogpost_id=blogpost._id) }}"
-						class="btn-small buttons home-page-buttons edit-button hvr-grow hvr-glow">Edit</a>
+						class="btn-small buttons home-page-buttons edit-button hvr-grow hvr-glow">Edit <i class="far fa-edit prefix"></i></a>
 					{% endif %}
 				</div>
 			</div>
@@ -66,15 +66,15 @@
 					<div class="card-stacked">
 						<div class="card-content">
 							<h2> {{ blogpost.blog_title }} </h2>
-							<p>created by {{ blogpost.created_by }} at {{ blogpost.created_at }}</p>
+							<p>created by {{ blogpost.created_by }} on {{ blogpost.created_at }}</p>
 						</div>
 						<div class="card-action">
 							<a href="{{ url_for('view_post', blogpost_id=blogpost._id) }}"
-								class="btn-small buttons hvr-grow hvr-glow">View Post</a>
+								class="btn-small buttons hvr-grow hvr-glow">View Post <i class="far fa-eye prefix"></i></a>
 							{% if session.username|lower == blogpost.created_by|lower %}
-							<button data-target="modal1" class="btn-small buttons home-page-buttons hvr-glow hvr-grow modal-trigger">Delete</button>
+							<button data-target="modal1" class="btn-small buttons home-page-buttons hvr-glow hvr-grow modal-trigger">Delete <i class="far fa-trash-alt prefix"></i></button>
 							<a href="{{ url_for('edit_post', blogpost_id=blogpost._id) }}"
-								class="btn-small buttons home-page-buttons edit-button hvr-grow hvr-glow">Edit</a>
+								class="btn-small buttons home-page-buttons edit-button hvr-grow hvr-glow">Edit <i class="far fa-edit prefix"></i></a>
 							{% endif %}
 						</div>
 					</div>
@@ -90,9 +90,9 @@
 			<p>Are you sure you want to delete this post?</p>
 		</div>
 		<div class="modal-footer">
-			<button class="btn-small pop-up-buttons modal-close hvr-glow hvr-grow">Cancel</button>
+			<button class="btn-small pop-up-buttons modal-close hvr-glow hvr-grow">Cancel <i class="far fa-times-circle prefix"></i></button>
 			<a href="{{ url_for('delete_post', blogpost_id=blogpost._id) }}"
-				class="btn-small pop-up-buttons hvr-grow hvr-glow">Delete</a>
+				class="btn-small pop-up-buttons hvr-grow hvr-glow">Delete <i class="far fa-trash-alt prefix"></i></a>
 		</div>
 	</div>
 {% endfor %}

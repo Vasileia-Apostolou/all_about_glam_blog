@@ -30,7 +30,7 @@ small a {
 
 /* ------ ABOUT ------ */
 .about-section {
-    background-color: white;
+    background-color: #fcfcfc;
     padding-bottom: 5px;
     border-radius: 25px;
 }
@@ -156,7 +156,7 @@ form {
 
 /* -------- SEARCH SECTION --------- */
 .search-section {
-    background-color: #f8f1f3;
+    background-color: #f2e4e8;
     border-radius: 20px;
 }
 
@@ -171,7 +171,7 @@ form {
 }
 
 .search-button {
-    background-color: #ebd7dd;
+    background-color: #debdc7;
     color: #a9546f; 
 }
 
@@ -185,6 +185,7 @@ form {
     font-size: 30px;
     color: #824155;
     margin-left: 20px;
+    
 }
 
 .social-icons:hover {
@@ -193,6 +194,10 @@ form {
 
 .socials {
     display: flex;
+}
+
+.footer-text {
+    float: right;
 }
 
 
