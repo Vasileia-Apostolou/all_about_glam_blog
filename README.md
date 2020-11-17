@@ -5,7 +5,7 @@
 </p>
 
 <p align=center>
-<a href="">Open App</a></p>
+<a href="https://all-about-glam-blog.herokuapp.com/">Open App</a></p>
 
 ## Table Of Content 
 
@@ -390,4 +390,4 @@ To run my code locally, users can download a local copy of my code to their desk
 ### Disclaimer
 This project is for educational purposes only.
 
-[Back to the top ↑] (#All-About-Glam-Blog)
+[Back to the top ↑](all_about_glam_blog)
