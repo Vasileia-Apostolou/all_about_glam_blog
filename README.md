@@ -1,8 +1,6 @@
 # [All About Glam](https://all-about-glam-blog.herokuapp.com/) - Milestone Project : Data Centric Development - Code Institute 
 
-<p align=center>
-<img src="">
-</p>
+![Web Demo](static/images/demo-screenshot.png)
 
 <p align=center>
 <a href="https://all-about-glam-blog.herokuapp.com/">Open App</a></p>
@@ -142,7 +140,7 @@ Based on the user interaction, flash messages are displayed at the top of the pa
 In the future, I would like the Users Profile to display all their information, give the user the option of uploading a profile picture and the option of changing their information or password. Plus I would like to give them the option of editing or deleting their account.
 
 - **Share**-
-In the future, I would like to add a feature which allows the users to share their post which others on social media.
+In the future, I would like to add a feature which allows the users to share their post with others on social media.
 
 - **Pagination** -
 In the future, I would like to add pagination in my app to break the content into seperate pages for a more user-friendly experience.
@@ -311,7 +309,7 @@ After many tests I confirm that all functionalities work and appear as intended 
 
 ### Unresolved Bugs
 
-* A user who is logged it can still have access to the "Login" page by typing /login in the URL link. 
+* A user who is logged in can still have access to the "Login" page by typing /login in the URL link. 
 * A user can access the "Edit" page and edit other's posts by typing /edit_post in the URL link.
 
 ### Code Validation
