@@ -2,24 +2,27 @@
 {% block content %}
 
 <!-- VIEW POST PAGE -->
-<div class="row card-horizontal">
-  <div class="col l8 offset-12">
-	<div class="post_image">
-		<img src="{{ blogpost.blog_image }}" class="view_post_img">
+<div class="row">
+	<div class="col l8 offset-12">
+		<div class="post_image">
+			<img src="{{ blogpost.blog_image }}" class="view_post_img">
 	    </div>
-		<p> {{ blogpost.blog_title }} </p>
-		<p> {{ blogpost.blog_content }} </p>
-		<p>created by {{ blogpost.created_by }} at {{ blogpost.created_at }}</p>
-		<div class="col s3">
-			{% if session.username|lower == blogpost.created_by|lower %}
-			<div class="modal-buttons">
-				<a href="{{ url_for('edit_post', blogpost_id=blogpost._id) }}"
-					class="btn-small buttons home-page-buttons hvr-grow hvr-glow">Edit</a>
-				<button data-target="{{ blogpost._id }}" class="btn-small modal-trigger buttons hvr-glow hvr-grow">Delete</button>
+			<div class="center-align card-horizontal">
+				<p class="blogpost-view-title"> {{ blogpost.blog_title }} </p>
+				<p> {{ blogpost.blog_content }} </p>
+				<h6>created by {{ blogpost.created_by }} at {{ blogpost.created_at }}</h6>
+				<div class="col s3">
+					{% if session.username|lower == blogpost.created_by|lower %}
+					<div class="modal-buttons">
+						<a href="{{ url_for('edit_post', blogpost_id=blogpost._id) }}"
+							class="btn-small buttons home-page-buttons hvr-grow hvr-glow">Edit</a>
+						<button data-target="{{ blogpost._id }}" class="btn-small modal-trigger buttons hvr-glow hvr-grow">Delete</button>
+					</div>
+					{% endif %}
+				</div>
 			</div>
-			{% endif %}
-		</div>
 	</div>
+</div>
 
 <!-- MODAL -->
 <div id="{{ blogpost._id }}" class="modal">

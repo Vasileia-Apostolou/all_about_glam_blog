@@ -28,6 +28,12 @@ main {
     color: #540332;
 }
 
+.blogpost-view-title {
+    color: #540332;
+    font-size: 30px;
+   
+}
+
 small a {
     color: #8f475e;
 }
