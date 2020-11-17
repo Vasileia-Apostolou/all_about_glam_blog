@@ -97,7 +97,7 @@ The web application uses Python login to allow user to register or login/logout 
  Users can create their own account for free by filling the form and providing a username, email address and password which are required and stored in the database. The Form cannot be submitted if the username already exists but can create multiple accounts with the same email address. The users passwords are hashed for security purposes.
 
 - **Login** - 
-The login form has a username and password field which if correctly put in the users can login in their account.
+The login form has a username and password field which if correctly filled the users can login in their account.
 
 - **Logout** - 
 Users can logout from their account by clicking "Logout" in the navbar. 
@@ -109,7 +109,7 @@ Users who are registered and logged in can visit their profile page.
 Users can click on "Create Post" link in the navbar and will be directed to a form that has to be filled in with post title, image (optional), and content in order to create a new post. When the user clicks on the "Create Post" button, they will be redirected to the home page where they will be able to see their new post.
 
 - **Edit Post** -
-If the users want to update their post, they can click on the "Edit" button which appears at the bottom of their post. Also when they click on the "View Post" button, the post will open in a seperate page where they will still have the option of updating their post. Once the "Edit" button is clicked, a form will display in a separate page with the title, image url and content already written as it is. Then changes in the inputs can be made and updated by clicking on the "Update" button. In case the users change their mind on updating their post, there is a "Cancel" button which will redirect them to the home page. Users can only edit their post and not others.
+If the users want to update their post, they can click on the "Edit" button which appears at the bottom of their post. Also when they click on the "View Post" button, the post will open in a seperate page where they will still have the option of updating their post. Once the "Edit" button is clicked, a form will display in a separate page with the title, image url and content already pre-filled. Then changes in the inputs can be made and updated by clicking on the "Update" button. In case the users change their mind on updating their post, there is a "Cancel" button which will redirect them to the home page. Users can only edit their post and not others.
 
 - **Delete Post** -
 If the users want to delete their post, they can click on the "Delete" button which appears at the bottom of their post. Also when they click on the "View Post" button, the post will open in a seperate page where they will still have the option of deleting their post. Once the "delete" button is clicked, a pop-up will appear with the message "Are you sure you want to delete this post?". Then the user has the option of deleting the post by clicking the "Delete" button or cancel with the "Cancel" button which will exit the pop-up. Users can only delete their post and not others.
@@ -147,6 +147,9 @@ In the future, I would like to add pagination in my app to break the content int
 
 - **Back Button** - 
 In the future, I would like to add a button that takes a user back to "Home" page when they are on the "View Post" page.
+
+- **Flash Messages** - 
+Currently, the flash messages stay on the page unless the user reloads the page. In the future, I would like to add duration for the display
 
 
 ## Technologies Used 
@@ -388,4 +391,4 @@ To run my code locally, users can download a local copy of my code to their desk
 ### Disclaimer
 This project is for educational purposes only.
 
-([Back to the top ↑](#all_about_glam_blog))
+([Back to the top ↑](#All_About_Glam_Blog))
