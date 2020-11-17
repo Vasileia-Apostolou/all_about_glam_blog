@@ -371,4 +371,4 @@ To run my code locally, users can download a local copy of my code to their desk
 ### Disclaimer
 This project is for educational purposes only.
 
-[Back to the top ↑](#All-About-Glam)
+[Back to the top ↑](#All_About_Glam_Blog)
