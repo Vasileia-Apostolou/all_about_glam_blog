@@ -1,5 +1,12 @@
 # [All About Glam](https://all-about-glam-blog.herokuapp.com/) - Milestone Project : Data Centric Development - Code Institute 
 
+<p align=center>
+<img src="">
+</p>
+
+<p align=center>
+<a href="">Open App</a></p>
+
 ## Table Of Content 
 
 - [**About**](#About)
@@ -54,6 +61,7 @@ This application was created for my 3rd Milestone Project with Data Centric Deve
 * As a user, I want to be able to edit and update my blog posts.
 * As a user, I want to be able to delete my blog posts.
 * As a user, I want to be able to view my profile account.
+* As a user, I want to be able to search and find a post.
 
 ### Research
 I researched tutorials with Python and MongoDB on Youtube and Udemy, to understand more how to create a CRUD application and I could get a clear idea of what functionality and design I wanted my web application to have, however most of this project's user authentication functionality was taken from [Code Institute's](https://codeinstitute.net/) task manager mini project.
@@ -79,7 +87,7 @@ To create this project's wireframes I used [Balsamiq](https://balsamiq.com/).
 During the development process some changes were made.
 
 ### Design
-I wanted a pink color scheme for this project to give a girly and fun look. For the background I used a glittery fuchsia image and I kept the color of the navbar, footer and buttons the same color of light pink. All forms have a white background with black text and icons. 
+I wanted a pink color scheme for this project to give a girly and fun look. For the background I used a glittery fuchsia image and I kept the color of the navbar, footer and buttons the same pink color scheme. All forms have a white background with black text and icons. 
 
 ## Features
 
@@ -109,7 +117,7 @@ If the users want to update their post, they can click on the "Edit" button whic
 If the users want to delete their post, they can click on the "Delete" button which appears at the bottom of their post. Also when they click on the "View Post" button, the post will open in a seperate page where they will still have the option of deleting their post. Once the "delete" button is clicked, a pop-up will appear with the message "Are you sure you want to delete this post?". Then the user has the option of deleting the post by clicking the "Delete" button or cancel with the "Cancel" button which will exit the pop-up. Users can only delete their post and not others.
 
 - **View Post** -
-On the bottom left of every post there is a "View Post" button which opens the post in a seperate page and displays the full post alone. The user who created that post has the option of editing or deleting the post.
+On the bottom left of every post there is a "View Post" button which opens the post in a seperate page and displays the full post alone. Only the he user who created that post has the option of editing or deleting the post.
 
 - **Blog Post** - 
 Blog posts are displayed in the home page from newest to oldest.
@@ -122,7 +130,7 @@ The user can search a particular blog post by typing a word/words in the search 
 Example : If the user searches the word "makeup" all posts that include "makeup" in the title or content will appear.
 
 - **Footer** -
-The footer includes a small "About" paragraph and social media links.
+The footer includes a heading of "Connect With Us" and social media links.
 
 - **Flash Messages** - 
 Based on the user interaction, flash messages are displayed at the top of the page right below the navbar. Flash messages let users know that their actions are successfully completed.
@@ -136,8 +144,11 @@ In the future, I would like the Users Profile to display all their information, 
 - **Share**-
 In the future, I would like to add a feature which allows the users to share their post which others on social media.
 
--**Pagination**-
+- **Pagination** -
 In the future, I would like to add pagination in my app to break the content into seperate pages for a more user-friendly experience.
+
+- **Back Button** - 
+In the future, I would like to add a button that takes a user back to "Home" page when they are on the "View Post" page.
 
 
 ## Technologies Used 
@@ -266,7 +277,12 @@ OR
  3. Flash message will appear saying "Post deleted!"
 
 - **As a user, I want to be able to view my profile account.**
-  1. Click on the "Profile" link in the navbar.
+ 1. Click on the "Profile" link in the navbar.
+
+- **As a user, I want to be able to search a post.**
+ 1. Type a word related to the post you are looking for.
+ 2. Click on the "Search" button.
+
 
  ### Manual Testing
  * I tested the registration form by creating several fake user accounts with a username, email address, password and tested the "Register" button.
@@ -362,9 +378,9 @@ To run my code locally, users can download a local copy of my code to their desk
 * Forms Structure was taken from [Materialize Forms](https://materializecss.com/text-inputs.html).
 * NavBar HTML and JavaScript code was taken from [Materialize NavBar](https://materializecss.com/navbar.html).
 
-
 ### Media 
 * Background Image was taken from [Google Images](https://www.google.dk/imghp?hl=en&tab=wi&authuser=0&ogbl) .
+* None of the post images belong to me. I have taken all images from different and random [Google](https://www.google.dk/imghp?hl=en&tab=wi&authuser=0&ogbl) searches.
 
 ### Acknowledgements
 * Overall project and README file was inspired by [this](https://github.com/hebs87/cookbook-milestone-project-three) project.
@@ -374,4 +390,4 @@ To run my code locally, users can download a local copy of my code to their desk
 ### Disclaimer
 This project is for educational purposes only.
 
-[Back to the top ↑](#all-about-glam-blog)
+[Back to the top ↑] (#All-About-Glam-Blog)

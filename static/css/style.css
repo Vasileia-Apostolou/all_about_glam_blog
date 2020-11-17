@@ -114,13 +114,12 @@ nav .brand-logo {
 .buttons {
     background-color: #debdc7;
     color: #4e2733;
-    margin-left: 30px;
 }
 
 .pop-up-buttons {
     background-color: #debdc7;
     color: #4e2733;
-    margin-right: 50px;
+   margin-left: 20px;
 }
 
 .buttons:hover, 
@@ -135,11 +134,15 @@ nav .brand-logo {
     position: relative;
 }
 
+.btn {
+    margin: 5px;
+}
 .edit-button1 {
     padding: 0 28px;
 }
 
-.modal-buttons {
+/* new */
+.post-buttons {
     display: flex;
 }
 
