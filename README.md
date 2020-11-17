@@ -390,4 +390,4 @@ To run my code locally, users can download a local copy of my code to their desk
 ### Disclaimer
 This project is for educational purposes only.
 
-[Back to the top ↑](all_about_glam_blog)
+([Back to the top ↑](#all_about_glam_blog))

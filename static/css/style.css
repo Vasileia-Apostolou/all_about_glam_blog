@@ -53,7 +53,7 @@ small a {
     font-family: "Sail", cursive;
     color: #a9546f !important;
     text-shadow: 2px 2px 2px #e5cad2;
-    font-size: 23px;
+    font-size: 25px;
 }
 
 .about-section-title {
@@ -145,7 +145,7 @@ nav .brand-logo {
 }
 
 
-/.img {
+.img {
     width: 100%;
     height: 100%;
 }
@@ -212,10 +212,11 @@ form {
 /* -------- FOOTER -------- */
 .page-footer {
     background-color: #f2e4e8;
+    display: flex;
 }
 
 .social-icons {
-    font-size: 30px;
+    font-size: 25px;
     color: #824155;
     text-shadow: 2px 1px 1px white;
     margin-left: 20px;
@@ -231,11 +232,23 @@ form {
 }
 
 .footer-text {
-    float: right;
     color: #824155;
     text-shadow: 1px 1px 3px white;
 }
 
+footer a {
+  display: inline-block;
+  font-size: 2.1rem;
+  border: 1px solid #824155;;
+  padding: 12px;
+  border-radius: 5px;
+  background-color: #ffffff;
+  align-items: center;
+}
+
+.page-footer ul {
+    align-items: center;
+}
 
 /* ------- MEDIA QUERIES -------- */
 
@@ -246,6 +259,7 @@ form {
    .blopost-title {
     color: #540332;
     font-size: 25px;
+    text-align: center;
 }
 
    .blogpost-view-title {
