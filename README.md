@@ -149,7 +149,7 @@ In the future, I would like to add pagination in my app to break the content int
 In the future, I would like to add a button that takes a user back to "Home" page when they are on the "View Post" page.
 
 - **Flash Messages** - 
-Currently, the flash messages stay on the page unless the user reloads the page. In the future, I would like to add duration for the display
+Currently, the flash messages remain on the page unless the user reloads the page. In the future, I would like to add duration time for the display.
 
 
 ## Technologies Used 
@@ -391,4 +391,3 @@ To run my code locally, users can download a local copy of my code to their desk
 ### Disclaimer
 This project is for educational purposes only.
 
-([Back to the top ↑](#All_About_Glam_Blog))
