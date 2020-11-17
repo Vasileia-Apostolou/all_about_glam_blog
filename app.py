@@ -24,10 +24,11 @@ mongo = PyMongo(app)
 @app.route("/")
 @app.route("/blog_posts")
 def blog_posts():
-    blogs = list(mongo.db.blogpost.find().sort(
-        'created_at', pymongo.DESCENDING))
+    blogs = list(mongo.db.blogpost.find())
     return render_template("blogpost.html", blogs=blogs)
 
+
+# SEARCH BAR FUNCTIONALITY
 
 @app.route("/search", methods=["GET", "POST"])
 def search():
@@ -36,35 +37,52 @@ def search():
     return render_template("blogpost.html", blogs=blogs)
 
 
+# USER REGISTRATION FUNCTIONALITY
+
 @app.route("/register", methods=["GET", "POST"])
 def register():
+    '''
+        Create new user account
+        Check that the username hasn't been used before
+        Use generate_password_hash to hash the password in the database
+    '''
     if request.method == "POST":
         existing_user = mongo.db.users.find_one(
             {"username": request.form.get("username").lower()})
 
+        # Check if username already exists
         if existing_user:
             flash("Username already exists")
             return redirect(url_for("register"))
 
+        '''
+            If all inputs are correct,
+            add new user to the database and hash the password
+        '''
         register = {
             "username": request.form.get("username").lower(),
             "email_address": request.form.get("email_address").lower(),
             "password": generate_password_hash(request.form.get("password"))
         }
         mongo.db.users.insert_one(register)
-
         session["username"] = request.form.get("username").lower()
         flash("Account successfully created!")
         return redirect(url_for("users", username=session["username"]))
     return render_template("register.html")
 
 
+# USER LOGIN FUNCTIONALITY
+
 @app.route("/login", methods=["GET", "POST"])
 def login():
+    ''' Check that the user exists and the password matches
+        the hashed password in the database
+    '''
     if request.method == "POST":
         existing_user = mongo.db.users.find_one(
             {"username": request.form.get("username").lower()})
 
+        # Check if username exists and password matches hashed password
         if existing_user:
             if check_password_hash(
              existing_user["password"], request.form.get("password")):
@@ -72,6 +90,7 @@ def login():
                 flash("Welcome, {}".format(request.form.get("username")))
                 return redirect(url_for(
                     "users", username=session["username"]))
+            # If username or password is incorrect,display flash message
             else:
                 flash("Incorrect Username or Password")
                 return redirect(url_for("login"))
@@ -83,8 +102,11 @@ def login():
     return render_template("login.html")
 
 
+# USERS PROFILE
+
 @app.route("/users/<username>", methods=["GET", "POST"])
 def users(username):
+    # If user is in session,display username
     username = mongo.db.users.find_one(
         {"username": session["username"]})["username"]
 
@@ -94,12 +116,17 @@ def users(username):
     return redirect(url_for("login"))
 
 
+# USER LOGOUT FUNCTIONALITY
+
 @app.route("/logout")
 def logout():
-    flash("You have been logged out!")
+    # Remove session cookie and end user session
     session.pop("username")
+    flash("You have been logged out!")
     return redirect(url_for("login"))
 
+
+# CREATE OPERATION
 
 @app.route("/create_blogpost", methods=["GET", "POST"])
 def create_blogpost():
@@ -118,8 +145,13 @@ def create_blogpost():
     return render_template("create_blogpost.html")
 
 
+# UPDATE OPERATION
+
 @app.route("/edit_post/<blogpost_id>", methods=["GET", "POST"])
 def edit_post(blogpost_id):
+    '''
+    Update existing database with new form values
+    '''
     if request.method == "POST":
         blog = {
             "blog_title": request.form.get("blog_title"),
@@ -129,6 +161,7 @@ def edit_post(blogpost_id):
             "created_at": datetime.utcnow().strftime('%B %d %Y')
         }
         mongo.db.blogpost.update({"_id": ObjectId(blogpost_id)}, blog)
+        # Flash message confirms that post has been updated
         flash("Post Updated!")
         return redirect(url_for("blog_posts"))
 
@@ -136,15 +169,22 @@ def edit_post(blogpost_id):
     return render_template("edit_post.html", blogpost=blogpost)
 
 
+# DELETE OPERATION
+
 @app.route("/delete_post/<blogpost_id>")
 def delete_post(blogpost_id):
+    # Delete the post ID
     mongo.db.blogpost.delete_one({"_id": ObjectId(blogpost_id)})
+    # Flash message confirms that post has been deleted
     flash("Post Deleted!")
     return redirect(url_for("blog_posts"))
 
 
+# VIEW POST FUNCTIONALITY
+
 @app.route("/view_post/<blogpost_id>")
 def view_post(blogpost_id):
+    # Find the post ID
     blogpost = mongo.db.blogpost.find_one({"_id": ObjectId(blogpost_id)})
     return render_template("view_post.html", blogpost=blogpost)
 

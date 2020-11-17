@@ -3,7 +3,7 @@
 
 <!-- HOME PAGE -->
 <div class="row">
-  <div class="col l8 offset-12"
+  <div class="col l8 offset-12">
 	<div class="post_image">
 		<img src="{{ blogpost.blog_image }}" class="view_post_img">
 	    </div>
@@ -15,14 +15,14 @@
 			<div class="modal-buttons">
 				<a href="{{ url_for('edit_post', blogpost_id=blogpost._id) }}"
 					class="btn-small buttons home-page-buttons hvr-grow hvr-glow">Edit</a>
-				<button data-target="modal1" class="btn-small modal-trigger buttons hvr-glow hvr-grow">Delete</button>
+				<button data-target="{{ blogpost._id }}" class="btn-small modal-trigger buttons hvr-glow hvr-grow">Delete</button>
 			</div>
 			{% endif %}
 		</div>
 	</div>
 
 <!-- MODAL -->
-<div id="modal1" class="modal">
+<div id="{{ blogpost._id }}" class="modal">
 	<div class="modal-content">
 		<h3>Delete Post</h3>
 		<p>Are you sure you want to delete this post?</p>
