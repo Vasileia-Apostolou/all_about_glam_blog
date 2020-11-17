@@ -24,6 +24,10 @@ main {
     text-transform: uppercase;
 }
 
+.blopost-title {
+    color: #540332;
+}
+
 small a {
     color: #8f475e;
 }

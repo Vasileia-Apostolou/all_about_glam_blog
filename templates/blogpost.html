@@ -38,8 +38,8 @@
                   <img src="{{ blogpost.blog_image }}">
 				</div>
 				<div class="card-content">
-					<h2> {{ blogpost.blog_title }} </h2>
-					<p>created by {{ blogpost.created_by }} on {{ blogpost.created_at }}</p>
+					<h2 class="cengter-align blopost-title"> {{ blogpost.blog_title }} </h2>
+					<p class="center-align">created by {{ blogpost.created_by }} on {{ blogpost.created_at }}</p>
 				</div>
 				<div class="card-action">
 					<a href="{{ url_for('view_post', blogpost_id=blogpost._id) }}"
@@ -66,8 +66,8 @@
       </div>
 					<div class="card-stacked">
 						<div class="card-content">
-							<h2> {{ blogpost.blog_title }} </h2>
-							<p>created by {{ blogpost.created_by }} on {{ blogpost.created_at }}</p>
+							<h2 class="center-align blopost-title"> {{ blogpost.blog_title }} </h2>
+							<p class="center-align">created by {{ blogpost.created_by }} on {{ blogpost.created_at }}</p>
 						</div>
 						<div class="card-action">
 							<a href="{{ url_for('view_post', blogpost_id=blogpost._id) }}"
