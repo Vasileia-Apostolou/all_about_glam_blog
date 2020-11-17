@@ -7,7 +7,7 @@
 		<div class="post-image">
 			<img class="responsive-image" src="{{ blogpost.blog_image }}">
 	    </div>
-			<!--<div class="center-align card horizontal post-border">-->
+			<div class="center-align post-border view-post-bg">
 				<h2 class="blogpost-view-title"> {{ blogpost.blog_title }} </h2>
 				<p> {{ blogpost.blog_content }} </p>
 				<h6>created by {{ blogpost.created_by }} at {{ blogpost.created_at }}</h6>
@@ -22,6 +22,7 @@
 					{% endif %}
 				</div>
 			</div>
+	</div>
 	</div>
 
 

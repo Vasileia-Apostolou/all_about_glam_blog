@@ -16,6 +16,10 @@ main {
     flex: 1 0 auto;
 }
 
+small a {
+    color: #8f475e;
+}
+
 .page-title {
     background-color: #fffefe;
     color: #8f475e;
@@ -24,6 +28,7 @@ main {
     text-transform: uppercase;
 }
 
+/* ------ BLOGPOSTS -------*/
 .blopost-title {
     color: #540332;
 }
@@ -31,15 +36,6 @@ main {
 .blogpost-view-title {
     color: #540332;
     font-size: 30px;
-   
-}
-
-small a {
-    color: #8f475e;
-}
-
-.post-border {
-    border: 5px solid #540332;
 }
 
 /* ------ ABOUT ------ */
@@ -93,7 +89,7 @@ nav .brand-logo {
 
 .nav-styling-mobile {
     font-size: 18px;
-    color: #a9546f !important;
+    
 }
 
 .nav-wrapper {
@@ -209,6 +205,15 @@ form {
     color: #a9546f; 
 }
 
+/* ------ VIEW POST PAGE -------*/
+.post-border {
+    border: 5px solid #540332;
+}
+
+.view-post-bg {
+    background-color: #fcfcfc;
+}
+
 /* -------- FOOTER -------- */
 .page-footer {
     background-color: #f2e4e8;
@@ -219,8 +224,7 @@ form {
     font-size: 25px;
     color: #824155;
     text-shadow: 2px 1px 1px white;
-    margin-left: 20px;
-    
+    margin-left: 15px;
 }
 
 .social-icons:hover {
@@ -234,21 +238,21 @@ form {
 .footer-text {
     color: #824155;
     text-shadow: 1px 1px 3px white;
+    text-align: center;
 }
 
-footer a {
-  display: inline-block;
-  font-size: 2.1rem;
-  border: 1px solid #824155;;
-  padding: 12px;
-  border-radius: 5px;
-  background-color: #ffffff;
-  align-items: center;
+.page-footer{
+  display:flex;
 }
 
-.page-footer ul {
-    align-items: center;
+.page-footer ul{
+  justify-content:center;
+  text-align:center;
 }
+
+.page-footer ul li{
+  display:inline-block;
+ }
 
 /* ------- MEDIA QUERIES -------- */
 
@@ -276,6 +280,7 @@ footer a {
         display: none;
     }
 }
+
 
 @media only screen and (max-width: 1000px) {
     .edit-button {
