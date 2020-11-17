@@ -25,7 +25,6 @@
   - [**Devices**](#Devices)
   - [**Testing User Stories**](#Testing-User-Stories)
   - [**Manual Testing**](#Manual-Testing)
-  - [**Resolved Bugs**](#Resolved-Bugs)
   - [**Unresolved Bugs**](#Unresolved-Bugs)
   - [**Code Validation**](#Code-Validation)
 - [**Deployment**](#Deployment)
@@ -293,6 +292,11 @@ OR
 App link was also shared with friends and family for further use and testing.
 
 After many tests I confirm that all functionalities work and appear as intended on different screen sizes.
+
+### Unresolved Bugs
+
+* A user who is logged it can still have access to the "Login" page by typing /login in the URL link. 
+* A user can access the "Edit" page and edit other's posts by typing /edit_post in the URL link.
 
 ### Code Validation
 The web application's HTML and CSS code has been tested in [W3C Validator](https://validator.w3.org/). The JavaScript code has been tested in [JS Hint](https://jshint.com/). Python syntax has been tested in [Pep8 Online Tool](http://pep8online.com/) and responsiveness was tested in [Resposinator](https://www.responsinator.com/), [Am I Responsive](http://ami.responsivedesign.is/) and [Mobile-Friendly Test](https://search.google.com/test/mobile-friendly).

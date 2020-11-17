@@ -6,15 +6,15 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
-    display: flex;
+    /*display: flex;
     min-height: 100vh;
-    flex-direction: column;
+    flex-direction: column;*/
     font-family: "Quicksand", sans-serif;
 }
 
-main {
+/*main {
     flex: 1 0 auto;
-} 
+} */
 
 .page-title {
     background-color: #fffefe;
@@ -36,6 +36,10 @@ main {
 
 small a {
     color: #8f475e;
+}
+
+.post-border {
+    border: 5px solid #540332;
 }
 
 /* ------ ABOUT ------ */
@@ -108,21 +112,22 @@ nav .brand-logo {
 
 /* ------ BUTTONS ------- */
 .buttons {
-    background-color: #f2e4e8;
-    color: #a9546f;
+    background-color: #debdc7;
+    color: #4e2733;
     margin-left: 30px;
 }
 
 .pop-up-buttons {
-    background-color: #f2e4e8;
-    color: #a9546f;
+    background-color: #debdc7;
+    color: #4e2733;
     margin-right: 50px;
 }
 
 .buttons:hover, 
 .pop-up-buttons:hover,
 .search-button:hover {
-    background-color: #e5cad2;
+    background-color: #be7b90;
+    color: #341a22;
 }
 
 .home-page-buttons {
@@ -130,14 +135,26 @@ nav .brand-logo {
     position: relative;
 }
 
-.edit-button {
+.edit-button1 {
     padding: 0 28px;
 }
 
+.modal-buttons {
+    display: flex;
+}
+
 /* ------- IMAGES -------- */
-.img {
+/*.img {
+    width: 100%;
+    height: 100%;
+}*/
+
+.post-image img {
     width: 100%;
     height: auto;
+    margin-top: 5px;
+    margin-bottom: 5px;
+
 }
 
 

@@ -3,26 +3,26 @@
 
 <!-- VIEW POST PAGE -->
 <div class="row">
-	<div class="col l8 offset-12">
-		<div class="post_image">
-			<img src="{{ blogpost.blog_image }}" class="view_post_img">
+	<div class="col l8 offset-l2 ">
+		<div class="post-image">
+			<img class="responsive-image" src="{{ blogpost.blog_image }}">
 	    </div>
-			<div class="center-align card-horizontal">
-				<p class="blogpost-view-title"> {{ blogpost.blog_title }} </p>
+			<!--<div class="center-align card horizontal post-border">-->
+				<h2 class="blogpost-view-title"> {{ blogpost.blog_title }} </h2>
 				<p> {{ blogpost.blog_content }} </p>
 				<h6>created by {{ blogpost.created_by }} at {{ blogpost.created_at }}</h6>
 				<div class="col s3">
 					{% if session.username|lower == blogpost.created_by|lower %}
-					<div class="modal-buttons">
+					<div class="view-buttons">
 						<a href="{{ url_for('edit_post', blogpost_id=blogpost._id) }}"
-							class="btn-small buttons home-page-buttons hvr-grow hvr-glow">Edit</a>
-						<button data-target="{{ blogpost._id }}" class="btn-small modal-trigger buttons hvr-glow hvr-grow">Delete</button>
+							class="btn buttons home-page-buttons hvr-grow hvr-glow">Edit <i class="far fa-edit prefix"></i></a>
+						<button data-target="{{ blogpost._id }}" class="btn modal-trigger buttons hvr-glow hvr-grow">Delete <i class="far fa-trash-alt prefix"></i></button>
 					</div>
 					{% endif %}
 				</div>
 			</div>
 	</div>
-</div>
+
 
 <!-- MODAL -->
 <div id="{{ blogpost._id }}" class="modal">
